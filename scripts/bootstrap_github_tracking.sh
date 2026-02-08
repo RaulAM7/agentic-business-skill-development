@@ -89,56 +89,50 @@ create_labels() {
 
     # Phase labels
     declare -a phase_labels=(
-        "phase:01:Phase 01 - Foundations"
-        "phase:02:Phase 02 - [Curriculum Pending]"
-        "phase:03:Phase 03 - [Curriculum Pending]"
-        "phase:04:Phase 04 - [Curriculum Pending]"
-        "phase:05:Phase 05 - [Curriculum Pending]"
+        "phase:01"
+        "phase:02"
+        "phase:03"
+        "phase:04"
+        "phase:05"
     )
 
-    for label_spec in "${phase_labels[@]}"; do
-        IFS=':' read -r label desc <<< "$label_spec"
+    for label in "${phase_labels[@]}"; do
         if gh label list | grep -q "^${label}$"; then
             log_warn "Label '$label' already exists"
         else
-            gh label create "$label" --description "$desc" --color "0366d6"
-            log_success "Created label '$label'"
+            gh label create "$label" --color "0366d6" 2>/dev/null && log_success "Created label '$label'" || log_warn "Could not create label '$label'"
         fi
     done
 
     # Type labels
     declare -a type_labels=(
-        "type:learning:Learning unit (module, lesson, exercise)"
-        "type:exercise:Hands-on exercise or mini-project"
-        "type:extraction:Extract agents, prompts, or skills"
-        "type:curriculum:Curriculum definition and planning"
-        "type:admin:Administrative and synchronization tasks"
+        "type:learning"
+        "type:exercise"
+        "type:extraction"
+        "type:curriculum"
+        "type:admin"
     )
 
-    for label_spec in "${type_labels[@]}"; do
-        IFS=':' read -r label desc <<< "$label_spec"
+    for label in "${type_labels[@]}"; do
         if gh label list | grep -q "^${label}$"; then
             log_warn "Label '$label' already exists"
         else
-            gh label create "$label" --description "$desc" --color "a2eeef"
-            log_success "Created label '$label'"
+            gh label create "$label" --color "a2eeef" 2>/dev/null && log_success "Created label '$label'" || log_warn "Could not create label '$label'"
         fi
     done
 
     # Status labels
     declare -a status_labels=(
-        "status:ready:Unblocked, can be started"
-        "status:in-progress:Currently being worked on"
-        "status:blocked:Blocked by dependencies"
+        "status:ready"
+        "status:in-progress"
+        "status:blocked"
     )
 
-    for label_spec in "${status_labels[@]}"; do
-        IFS=':' read -r label desc <<< "$label_spec"
+    for label in "${status_labels[@]}"; do
         if gh label list | grep -q "^${label}$"; then
             log_warn "Label '$label' already exists"
         else
-            gh label create "$label" --description "$desc" --color "ffd700"
-            log_success "Created label '$label'"
+            gh label create "$label" --color "ffd700" 2>/dev/null && log_success "Created label '$label'" || log_warn "Could not create label '$label'"
         fi
     done
 }
@@ -159,10 +153,15 @@ create_milestones() {
     )
 
     for milestone in "${milestones[@]}"; do
-        if gh milestone list | grep -q "^${milestone}$"; then
+        # Check if milestone exists using GitHub API
+        if gh api repos/:owner/:repo/milestones -q ".[] | select(.title==\"$milestone\")" 2>/dev/null | grep -q "$milestone"; then
             log_warn "Milestone '$milestone' already exists"
         else
-            gh milestone create --title "$milestone"
+            # Create milestone using GitHub API
+            gh api repos/:owner/:repo/milestones -f title="$milestone" > /dev/null 2>&1 || {
+                log_warn "Could not create milestone '$milestone' (may already exist)"
+                return 0
+            }
             log_success "Created milestone '$milestone'"
         fi
     done
