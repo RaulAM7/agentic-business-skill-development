@@ -26,6 +26,30 @@ This repository is a learning-by-building system for developing agentic business
 4. **Keep it lean** — No placeholder files, no fluff, only what's necessary
 5. **Track cost** — Be mindful of model usage; prefer batch operations
 
+## Project Management / Learning Path Tracking
+
+**System Overview:**
+- `learning-path/PROGRESS.md` — Source of truth for learning progress (checkboxes)
+- GitHub Issues — External tracking layer (labels, milestones, issues)
+- `docs/github-tracking.md` — Label conventions and sync protocol
+- `.claude/agents/itinerary-pm.md` — Sub-agent for PROGRESS.md ↔ GitHub sync
+
+**Workflow:**
+1. Update checkboxes in PROGRESS.md as you complete learning units
+2. Run `/agent itinerary-pm` to sync with GitHub Issues
+3. Use `scripts/bootstrap_github_tracking.sh` when setting up or resetting tracking
+
+**Rules:**
+- PROGRESS.md is always authoritative
+- GitHub reflects PROGRESS.md, not vice versa (unless explicitly syncing back)
+- Empty phases (02-05) have placeholder issues, not full curriculum
+- Extract artifacts to agents/prompts/skills as you complete modules
+
+**Do NOT:**
+- Invent content structure that doesn't exist
+- Mark checkboxes complete without actually doing the work
+- Create GitHub issues manually (use bootstrap script or itinerary-pm)
+
 ## Context and Memory Principles
 
 - Each phase in `learning-path/` is a self-contained learning unit
