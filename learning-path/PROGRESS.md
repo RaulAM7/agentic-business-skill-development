@@ -21,13 +21,13 @@
 
 ### Module 2: From Local to Live (2.1 - 2.5)
 
-**Status:** Partial (3/5)
+**Status:** Complete (5/5)
 
 - [x] 2.1 Setup - Environment and prerequisites
 - [x] 2.2 Plan - Architecture and design thinking
 - [x] 2.3 Build & Iterate - Development workflow and feedback loops
-- [ ] 2.4 GitHub Integration - Collaboration and remote workflow
-- [ ] 2.5 Go Live - Deployment and production readiness
+- [x] 2.4 GitHub Integration - Collaboration and remote workflow
+- [x] 2.5 Go Live - Deployment and production readiness
 
 ### Key Learnings
 
@@ -41,10 +41,11 @@
 
 ### Learning Extensions
 
-**Status:** Incomplete (blocked on curriculum)
+**Status:** Partial (in-progress)
 
-- [ ] crash-course-antigravity - *Blocked: curriculum not defined*
-- [ ] mini-projects - *Blocked: curriculum not defined*
+- [x] crash-course-claude-code - Claude Code fundamentals (Modules 1.1-1.8)
+- [ ] crash-course-antigravity - *In Progress: curriculum being developed*
+- [ ] mini-projects - *In Progress: exercises being created*
 
 ---
 
@@ -97,22 +98,22 @@
 
 ## Sync Status
 
-**Last Updated:** 2026-02-08
-**GitHub Sync Status:** Initializing
-**Outstanding Sync Tasks:**
-- [ ] Create GitHub labels (phase, type, status)
-- [ ] Create GitHub milestones (Phase 01-05)
-- [ ] Create issues from unchecked items
-- [ ] Establish bidirectional sync protocol
+**Last Updated:** 2026-02-08T21:45:00Z
+**GitHub Sync Status:** Active - Bidirectional sync operational
+**Completed Sync Tasks:**
+- [x] Create GitHub labels (phase:01-05, type:*, status:*)
+- [x] Create GitHub milestones (Phase 01-05)
+- [x] Create issues from unchecked items (#11-21)
+- [x] Establish bidirectional sync protocol (itinerary-pm agent active)
 
 ---
 
 ## Notes
 
-- **Phase 01 completeness:** 8/8 core lessons (Module 1) complete. Module 2 partial (3/5). Five key-learning documents complete.
-- **Blocked items:** crash-course-antigravity and mini-projects awaiting curriculum definition (status: blocked)
-- **Future phases:** Phases 02-05 are currently placeholders. Curriculum definition is blocking all content development.
-- **Extraction rate:** No agents/prompts/skills extracted yet. Pending system setup and learning completion.
+- **Phase 01 completeness:** 8/8 core lessons (Module 1) complete. 5/5 Module 2 complete. Five key-learning documents complete.
+- **In-progress items:** crash-course-claude-code tracked. crash-course-antigravity (issue #13) and mini-projects (issue #14) in development.
+- **Future phases:** Phases 02-05 curriculum definition in progress (issues #16-19 open, status: ready).
+- **Extraction rate:** itinerary-pm agent extracted and operational. Additional agents/prompts/skills pending.
 
 **Update protocol:**
 - Check a box when you complete a learning unit (not before)
