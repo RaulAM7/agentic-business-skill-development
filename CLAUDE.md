@@ -31,13 +31,20 @@ This repository is a learning-by-building system for developing agentic business
 **System Overview:**
 - `learning-path/PROGRESS.md` — Source of truth for learning progress (checkboxes)
 - GitHub Issues — External tracking layer (labels, milestones, issues)
+- GitHub Project — Visual board for organizing issues by phase/status
 - `docs/github-tracking.md` — Label conventions and sync protocol
 - `.claude/agents/itinerary-pm.md` — Sub-agent for PROGRESS.md ↔ GitHub sync
+
+**Setup:**
+1. Run `./scripts/bootstrap_github_tracking.sh` once to create labels, milestones, and issues ✓
+2. Run `./scripts/one-time-auth-setup.sh` to grant project scopes (browser required)
+3. Run `./scripts/setup_github_project.sh` to create the project board
+4. See `GITHUB_PROJECT_SETUP_REQUIRED.md` for detailed instructions
 
 **Workflow:**
 1. Update checkboxes in PROGRESS.md as you complete learning units
 2. Run `/agent itinerary-pm` to sync with GitHub Issues
-3. Use `scripts/bootstrap_github_tracking.sh` when setting up or resetting tracking
+3. View project board in GitHub for visual progress tracking
 
 **Rules:**
 - PROGRESS.md is always authoritative
