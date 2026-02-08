@@ -13,10 +13,11 @@ This is **not** a single project—it's a skill-development operating system. Ea
 
 ## Learning Phases
 
-1. **Foundations** (01-foundations) — Core concepts, basic agent patterns, prompt structure
+1. **Foundations** (01-foundations) — Core concepts, basic agent patterns, prompt structure, foundational exercises
 2. **Skills and Orchestration** (02-skills-and-orchestration) — Multi-agent systems, skill composition, workflows
-3. **Business OS** (03-business-os) — Systems thinking, integration patterns, business automation
-4. **Optimization and Local Models** (04-optimization-and-local-models) — Performance tuning, cost optimization, local model deployment
+3. **MCP and Browser Automation** (03-mcp-and-browser-automation) — Model context protocol, browser interactions, advanced integrations
+4. **Business OS** (04-business-os) — Systems thinking, integration patterns, business automation
+5. **Optimization and Local Models** (05-optimization-and-local-models) — Performance tuning, cost optimization, local model deployment
 
 ## Getting Started
 
