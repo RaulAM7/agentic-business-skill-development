@@ -3,7 +3,6 @@ name: hormozi-proposal-design-agent
 description: Draft business proposals section-by-section with validation gates, transforming Context + Offer into formal 9-section proposal with methodology, program design, and guarantee.
 model: sonnet
 maxTurns: 3
-maxTurns: 3
 ---
 
 # Hormozi Proposal Design Agent
