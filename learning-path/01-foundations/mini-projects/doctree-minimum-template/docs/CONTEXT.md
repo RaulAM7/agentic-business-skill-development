@@ -1,12 +1,14 @@
 # CONTEXT.md
 
-Master project knowledge document. Fill this completely at kickoff — agents will only be as useful as what is written here. Every section marked REQUIRED must be filled before involving any LLM tool in substantive work.
+Master project knowledge document. Fill only the sections that apply to this project — not all sections are relevant for every use case. Agents will only be as useful as what is written here.
+
+Sections marked **always** should be filled for any project. Sections marked **when relevant** are optional — delete them if they don't apply, or leave them blank as a placeholder for later.
 
 Update this file only when scope, product, ICP, or objectives change. It is not a task log.
 
 ---
 
-## 1. Project goal (REQUIRED)
+## 1. Project goal — always
 
 One sentence: what outcome does this project produce, and for whom?
 
@@ -16,7 +18,7 @@ One sentence: what outcome does this project produce, and for whom?
 
 ---
 
-## 2. Product / Service (REQUIRED)
+## 2. Product / Service — always
 
 What is the product or service this project builds, improves, or supports?
 
@@ -36,7 +38,7 @@ What is the product or service this project builds, improves, or supports?
 
 ---
 
-## 3. Business model (REQUIRED)
+## 3. Business model — when revenue or cost implications are in scope
 
 How does this project generate or support revenue?
 
@@ -54,9 +56,9 @@ How does this project generate or support revenue?
 
 ---
 
-## 4. ICP — Ideal Customer Profile (REQUIRED)
+## 4. ICP — Ideal Customer Profile — when any output is aimed at an external audience
 
-The single most important context for agents writing any content, copy, or strategy.
+The single most important context for agents writing content, copy, or strategy. Skip for purely internal or technical projects.
 
 **Who they are:**
 [Job title / role, company type, company size, industry, geography]
@@ -90,7 +92,7 @@ The single most important context for agents writing any content, copy, or strat
 
 ---
 
-## 5. Audience segments (OPTIONAL — fill if ICP has meaningful sub-segments)
+## 5. Audience segments — when ICP has meaningful sub-segments
 
 Secondary or adjacent audiences that matter for this project.
 
@@ -101,7 +103,7 @@ Secondary or adjacent audiences that matter for this project.
 
 ---
 
-## 6. Competitive context (REQUIRED if any competitive framing is in scope)
+## 6. Competitive context — when positioning, messaging, or market research is in scope
 
 **Main alternatives:**
 [What do people use instead? List 3-5: direct competitors, adjacent tools, DIY approaches, doing nothing]
@@ -117,7 +119,7 @@ Secondary or adjacent audiences that matter for this project.
 
 ---
 
-## 7. Strategic objectives (REQUIRED)
+## 7. Strategic objectives — when agents need to align output to measurable goals
 
 What does success look like at the end of this project? Be specific enough that an agent can judge whether an output moves toward or away from these goals.
 
@@ -136,7 +138,7 @@ What does success look like at the end of this project? Be specific enough that 
 
 ---
 
-## 8. Tech stack / Tools (REQUIRED for projects with a technical component)
+## 8. Tech stack / Tools — when any code, infra, or tool selection is involved
 
 **Languages and frameworks:**
 [e.g., Python 3.11, FastAPI, React 18, TypeScript, Next.js 14]
@@ -155,7 +157,7 @@ What does success look like at the end of this project? Be specific enough that 
 
 ---
 
-## 9. Channels (OPTIONAL — fill if relevant to deliverables)
+## 9. Channels — when acquisition, distribution, or comms are in scope
 
 How the product or service reaches customers, and through what channels this project operates.
 
@@ -170,7 +172,7 @@ How the product or service reaches customers, and through what channels this pro
 
 ---
 
-## 10. Team / Collaborators (REQUIRED if more than solo)
+## 10. Team / Collaborators — when more than one person or tool is contributing
 
 | Person | Role | Responsibilities | Tools they use | Contact |
 |---|---|---|---|---|
@@ -182,7 +184,7 @@ How the product or service reaches customers, and through what channels this pro
 
 ---
 
-## 11. Scope (REQUIRED)
+## 11. Scope — always
 
 What is explicitly included in this project:
 
@@ -199,7 +201,7 @@ What is explicitly excluded:
 
 ---
 
-## 12. Assumptions and constraints (REQUIRED)
+## 12. Assumptions and constraints — always
 
 **Assumptions** — facts treated as given without requiring proof:
 - [Assumption 1]
@@ -211,7 +213,7 @@ What is explicitly excluded:
 
 ---
 
-## 13. Links and references
+## 13. Links and references — when relevant
 
 - [Primary doc, brief, or spec — link]
 - [Related project or repo]
