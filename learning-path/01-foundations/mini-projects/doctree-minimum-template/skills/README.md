@@ -59,4 +59,4 @@ Do not build MCP wrappers now. Design skills as if they might become MCP tools l
 
 ## Example skill
 
-See `skill-example/` for a minimal working example: the `update-progress` skill.
+See `update-progress/` for a minimal working example: the `update-progress` skill.

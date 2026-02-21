@@ -14,20 +14,21 @@ cp -r learning-path/01-foundations/mini-projects/doctree-minimum-template/ /path
 cd /path/to/new-project/
 
 # Then:
-# 1. Edit CLAUDE.md — update project name and scope
-# 2. Fill docs/CONTEXT.md — Goal, Scope, Assumptions
+# 1. Fill CLAUDE.md Project Snapshot — name, ICP, phase, objective, stack
+# 2. Fill docs/CONTEXT.md — all REQUIRED sections (product, ICP, business model, stack, objectives)
 # 3. Customize docs/PROGRESS.md — replace checklist with your tasks
-# 4. Delete or adapt skills/skill-example/ — add your actual skills
-# 5. Clear docs/DECISIONS.md and docs/SPECS.md (keep structure)
+# 4. Delete or adapt skills/update-progress/ — add your actual skills
+# 5. Clear docs/DECISIONS.md and docs/SPECS.md (keep structure, delete examples)
 ```
 
 ## 5-minute setup checklist
 
 - [ ] Copy template to new location
 - [ ] Update `README.md` (this file) with project name and purpose
-- [ ] Fill `docs/CONTEXT.md` — define Goal, Scope, Out of scope
+- [ ] Fill `CLAUDE.md` Project Snapshot — name, purpose, ICP, phase, objectives, stack
+- [ ] Fill `docs/CONTEXT.md` fully — all REQUIRED sections (product, ICP, business model, tech stack, objectives, scope). Agents will only be as useful as what is written here.
 - [ ] Set initial tasks in `docs/PROGRESS.md`
-- [ ] Rename or remove `skills/skill-example/` if not needed
+- [ ] Rename or remove `skills/update-progress/` if not needed
 - [ ] Confirm `.claude/agents/project-manager.md` is wired correctly
 - [ ] First commit: `feat(init): scaffold project from doctree-minimum-template`
 
@@ -38,7 +39,7 @@ cd /path/to/new-project/
 | `CLAUDE.md` | Claude Code project memory and rules | Core |
 | `CODEX.md` | Codex coordination protocol | Core |
 | `ANTIGRAVITY.md` | Antigravity/Gemini coordination protocol | Core |
-| `docs/CONTEXT.md` | Project 1-pager: goal, scope, assumptions | Core |
+| `docs/CONTEXT.md` | Master project knowledge: product, ICP, business model, stack, objectives, competitive context | Core |
 | `docs/PROGRESS.md` | Source of truth for task state | Core |
 | `docs/DECISIONS.md` | Decision log with tradeoffs | Core |
 | `docs/SPECS.md` | Requirements and acceptance criteria | Core |
