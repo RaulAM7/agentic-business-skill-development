@@ -127,6 +127,7 @@ Cuando conectas herramientas externas con MCP, la separación de responsabilidad
 
 ## 6) Mermaid — Mapa conceptual del módulo
 
+```mermaid
 flowchart TD
   A[User request] --> B{Skill relevant?}
   B -->|No| Z[Default Claude behavior]
