@@ -127,7 +127,6 @@ Cuando conectas herramientas externas con MCP, la separación de responsabilidad
 
 ## 6) Mermaid — Mapa conceptual del módulo
 
-```mermaid
 flowchart TD
   A[User request] --> B{Skill relevant?}
   B -->|No| Z[Default Claude behavior]
@@ -138,15 +137,15 @@ flowchart TD
   F --> E
   E --> G[Output]
 
-  subgraph PD[Progressive Disclosure]
-    L1[Level 1: YAML frontmatter\n(always loaded)]
-    L2[Level 2: SKILL.md body\n(loaded when relevant)]
-    L3[Level 3: linked files\n(loaded as needed)]
+  subgraph PD["Progressive Disclosure"]
+    L1["Level 1: YAML frontmatter<br/>(always loaded)"]
+    L2["Level 2: SKILL.md body<br/>(loaded when relevant)"]
+    L3["Level 3: linked files<br/>(loaded as needed)"]
     L1 --> L2 --> L3
   end
 
-  subgraph MCPvsSkill[Skills + MCP]
-    K[MCP = Kitchen\n(connectivity/tools)]
-    R[Skill = Recipe\n(workflows/best practices)]
+  subgraph MCPvsSkill["Skills + MCP"]
+    K["MCP = Kitchen<br/>(connectivity/tools)"]
+    R["Skill = Recipe<br/>(workflows/best practices)"]
     K --> R
   end
