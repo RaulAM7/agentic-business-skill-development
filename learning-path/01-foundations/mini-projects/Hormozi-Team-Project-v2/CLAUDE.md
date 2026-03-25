@@ -2,10 +2,11 @@
 
 Lee estos archivos en orden antes de empezar cualquier tarea:
 
-1. `harness/RULES.md` — restricciones siempre activas
-2. `harness/TASKFLOW.md` — fases del workflow
-3. `harness/TEAM.md` — diseno del equipo, roles y coordinacion
-4. `harness/SKILLS_INDEX.md` — catalogo de skills disponibles
+1. `INTERACTION-DESIGN.md` — como interactua el usuario con el sistema
+2. `harness/RULES.md` — restricciones siempre activas
+3. `harness/TASKFLOW.md` — fases del workflow
+4. `harness/TEAM.md` — diseno del equipo, roles y coordinacion
+5. `harness/SKILLS_INDEX.md` — catalogo de skills disponibles
 
 ## Referencia rapida
 
@@ -13,18 +14,38 @@ Lee estos archivos en orden antes de empezar cualquier tarea:
 - **Conocimiento**: `shared/knowledge/` — 10 archivos de referencia canonica (Hormozi, Brunson, Valdo)
 - **Referencias**: `shared/references/` — documentos extraidos reutilizables (rubrica, gates, checklist)
 - **Deals**: `deals/[NombreDeal]/` — carpetas por cliente con estructura estandar
-- **Skills**: `.claude/agents/` — invocar via `/agent [nombre-skill]`
-- **Agente**: `/agent hormozi-strategist` — consultoria estrategica (no pipeline)
+- **Skills**: `shared/skills/[nombre]/SKILL.md` — procedimientos. Claude los LEE y los ejecuta inline.
+- **Agente**: `/agent hormozi-strategist` — unico subagente, consultoria estrategica (no pipeline)
 
 ## Arquitectura
 
-1 agente (consultoria estrategica) + 6 skills (pipeline de deals):
+1 agente conversacional + 6 skills (procedimientos inline):
 
 ```
-context-curation -> customer-mapping -> offer-design -> template-formatting -> proposal-critique
+AGENTE (subagente):
+  hormozi-strategist  ->  .claude/agents/hormozi-strategist.md
+                          Se invoca con /agent hormozi-strategist
+                          Consultoria abierta. NO pipeline.
+
+SKILLS (inline, no son subagentes):
+  context-curation     ->  shared/skills/context-curation/SKILL.md
+  customer-mapping     ->  shared/skills/customer-mapping/SKILL.md
+  offer-design         ->  shared/skills/offer-design/SKILL.md
+  template-formatting  ->  shared/skills/template-formatting/SKILL.md
+  proposal-critique    ->  shared/skills/proposal-critique/SKILL.md
+  qa-gate              ->  shared/skills/qa-gate/SKILL.md
 ```
 
-Cada skill lee del output de la anterior. El usuario dirige el flujo. No hay orquestador.
+## Como se ejecutan las skills
+
+Las skills NO son subagentes. Son documentos procedimentales que Claude lee y ejecuta en la conversacion principal:
+
+1. El usuario pide ejecutar una skill (ej: "ejecuta context-curation para el deal X")
+2. Claude lee el SKILL.md correspondiente de `shared/skills/`
+3. Claude sigue el procedimiento descrito en el SKILL.md paso a paso
+4. Todo ocurre en la misma conversacion — critico para skills de ALTA interactividad
+
+Esto es diferente de `/agent`, que spawna un subagente separado con su propio contexto.
 
 ## Estructura de deals
 

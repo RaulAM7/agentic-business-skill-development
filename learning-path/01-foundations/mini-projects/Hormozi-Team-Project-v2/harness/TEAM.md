@@ -1,6 +1,6 @@
 # TEAM
 
-Diseno del equipo de agentes y skills especializados, y como se coordinan.
+Diseno del equipo: 1 agente conversacional + 6 skills procedimentales, y como se coordinan.
 
 ## Mapa del equipo
 
@@ -10,7 +10,7 @@ Diseno del equipo de agentes y skills especializados, y como se coordinan.
         +----------------+----------------+
         |                                 |
    hormozi-strategist              SKILL PIPELINE
-   (agente, conversacional)       (el usuario invoca directamente)
+   (subagente, conversacional)    (Claude lee y ejecuta inline)
    Consultoria estrategica         |
    Preguntas abiertas              context-curation       (BAJA)
    Frameworks Hormozi/Brunson      customer-mapping        (ALTA)
@@ -25,23 +25,35 @@ Diseno del equipo de agentes y skills especializados, y como se coordinan.
 ### hormozi-strategist
 
 - **Archivo**: `.claude/agents/hormozi-strategist.md`
+- **Invocacion**: `/agent hormozi-strategist` (spawna subagente)
 - **Rol**: Consultor estrategico senior de negocio (Hormozi + Brunson + Valdo)
 - **Persona**: Directo, practico, sin humo. Tono consultor senior.
 - **Dominio**: Diseno de oferta, arquitectura de funnel, generacion de leads, validacion de producto, narrativa de ventas.
-- **Skills asociadas**: `proposal-critique` (puede invocarla cuando evalua propuestas)
 - **Cuando usar**: Preguntas abiertas de estrategia, aplicacion de frameworks, coaching de negocio.
 - **NO para**: Ejecucion del pipeline de deals (usar skills directamente).
 
 ## Skills
 
-| Skill | Tipo | Interactividad | Input | Output |
-|-------|------|----------------|-------|--------|
-| `context-curation` | extraccion | BAJA | Materiales brutos en `00-context/raw/` | Documento de Contexto |
-| `customer-mapping` | interpretativo | ALTA | Documento de Contexto | Customer Map |
-| `offer-design` | diseno | ALTA | Contexto + Customer Map | Documento de Offer |
-| `template-formatting` | formato | BAJA-MEDIA | Contexto + Offer | Documento de Proposal |
-| `proposal-critique` | diagnostico | BAJA | Todos los documentos del deal | Critique Report |
-| `qa-gate` | validacion | NINGUNA | Cualquier documento | Veredicto Pass/Fail |
+Las skills son procedimientos. Claude los lee y ejecuta INLINE en la conversacion principal. NO se spawnan como subagentes.
+
+| Skill | Archivo | Tipo | Interactividad |
+|-------|---------|------|----------------|
+| `context-curation` | `shared/skills/context-curation/SKILL.md` | extraccion | BAJA |
+| `customer-mapping` | `shared/skills/customer-mapping/SKILL.md` | interpretativo | ALTA |
+| `offer-design` | `shared/skills/offer-design/SKILL.md` | diseno | ALTA |
+| `template-formatting` | `shared/skills/template-formatting/SKILL.md` | formato | BAJA-MEDIA |
+| `proposal-critique` | `shared/skills/proposal-critique/SKILL.md` | diagnostico | BAJA |
+| `qa-gate` | `shared/skills/qa-gate/SKILL.md` | validacion | NINGUNA |
+
+### Como se ejecuta una skill
+
+1. El usuario pide trabajo del pipeline (ej: "curar el contexto del deal Yanira")
+2. Claude identifica la skill correcta via la tabla de routing (abajo)
+3. Claude lee el `SKILL.md` correspondiente con el Read tool
+4. Claude sigue el procedimiento descrito paso a paso en la misma conversacion
+5. Skills de ALTA interactividad pausan para validacion del usuario entre bloques
+
+**Por que inline y no subagente**: las skills de alta interactividad (customer-mapping, offer-design) necesitan multiples rondas de feedback con el usuario. Un subagente tiene contexto limitado y maxTurns. Ejecutar inline mantiene el contexto completo y permite la interaccion natural.
 
 ## Coordinacion
 
@@ -66,15 +78,15 @@ proposal-critique ──lee─────────────────�
 
 ## Reglas de routing
 
-| Si el usuario quiere... | Invocar |
-|--------------------------|---------|
-| Procesar transcripcion de cliente en contexto | `context-curation` |
-| Interpretar contexto con frameworks Hormozi | `customer-mapping` |
-| Disenar la oferta | `offer-design` |
-| Crear propuesta formal | `template-formatting` |
-| Evaluar calidad de propuesta | `proposal-critique` |
-| Validar cualquier documento antes de cerrarlo | `qa-gate` |
-| Hacer preguntas estrategicas de negocio | agente `hormozi-strategist` |
+| Si el usuario quiere... | Hacer |
+|--------------------------|-------|
+| Procesar transcripcion de cliente en contexto | Leer y ejecutar `shared/skills/context-curation/SKILL.md` |
+| Interpretar contexto con frameworks Hormozi | Leer y ejecutar `shared/skills/customer-mapping/SKILL.md` |
+| Disenar la oferta | Leer y ejecutar `shared/skills/offer-design/SKILL.md` |
+| Crear propuesta formal | Leer y ejecutar `shared/skills/template-formatting/SKILL.md` |
+| Evaluar calidad de propuesta | Leer y ejecutar `shared/skills/proposal-critique/SKILL.md` |
+| Validar cualquier documento antes de cerrarlo | Leer y ejecutar `shared/skills/qa-gate/SKILL.md` |
+| Hacer preguntas estrategicas de negocio | `/agent hormozi-strategist` (subagente) |
 
 ## Orquestacion: sin orquestador formal (decision de arquitectura)
 
@@ -87,4 +99,4 @@ proposal-critique ──lee─────────────────�
 - Un orquestador rigido seria fragil ante el trabajo iterativo y conversacional que hacemos aqui.
 
 **Como funciona el routing**:
-Claude Code lee CLAUDE.md al inicio -> CLAUDE.md apunta a TEAM.md -> TEAM.md describe las skills, sus dominios y cuando usarlas -> las `description` de cada skill contienen los triggers -> Claude Code lanza la skill adecuada.
+Claude lee CLAUDE.md al inicio -> CLAUDE.md apunta a TEAM.md -> TEAM.md describe las skills, sus rutas y cuando usarlas -> cuando el usuario pide trabajo del pipeline, Claude lee el SKILL.md correspondiente y lo ejecuta inline. Para consultoria estrategica, Claude lanza el subagente hormozi-strategist via `/agent`.

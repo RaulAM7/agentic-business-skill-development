@@ -15,7 +15,7 @@ deals/[NombreDeal]/00-context/raw/
 
 Leer materiales brutos y producir el Documento de Contexto.
 
-- Skill: `/agent context-curation`
+- Skill: `shared/skills/context-curation/SKILL.md` (leer y ejecutar inline)
 - Output: `deals/[NombreDeal]/00-context/context-document.md`
 - Interactividad: BAJA
 - Tambien produce: `deals/[NombreDeal]/scratch/context-gaps.md`
@@ -23,9 +23,9 @@ Leer materiales brutos y producir el Documento de Contexto.
 ## 3. Map (Mapear Customer)
 
 Transformar contexto curado en mapa de insights del cliente con logica Hormozi.
-Interactivo — el usuario valida interpretaciones.
+Interactivo — el usuario valida interpretaciones bloque a bloque.
 
-- Skill: `/agent customer-mapping`
+- Skill: `shared/skills/customer-mapping/SKILL.md` (leer y ejecutar inline)
 - Output: `deals/[NombreDeal]/01-customer-map/customer-map.md`
 - Interactividad: ALTA
 - Requiere: Documento de Contexto completo
@@ -34,7 +34,7 @@ Interactivo — el usuario valida interpretaciones.
 
 Disenar oferta aplicando Value Equation. Interactivo — el usuario valida decisiones de diseno.
 
-- Skill: `/agent offer-design`
+- Skill: `shared/skills/offer-design/SKILL.md` (leer y ejecutar inline)
 - Output: `deals/[NombreDeal]/02-offer/offer-design.md`
 - Interactividad: ALTA
 - Tambien produce: `deals/[NombreDeal]/scratch/offer-self-critique.md`
@@ -44,7 +44,7 @@ Disenar oferta aplicando Value Equation. Interactivo — el usuario valida decis
 
 Formalizar oferta en propuesta profesional de negocio.
 
-- Skill: `/agent template-formatting`
+- Skill: `shared/skills/template-formatting/SKILL.md` (leer y ejecutar inline)
 - Output: `deals/[NombreDeal]/03-proposal/proposal.md`
 - Interactividad: BAJA-MEDIA (2 gates obligatorios)
 - Requiere: Documento de Contexto + Offer Design
@@ -53,7 +53,7 @@ Formalizar oferta en propuesta profesional de negocio.
 
 Analizar propuesta desde perspectiva de comprador/negociador.
 
-- Skill: `/agent proposal-critique`
+- Skill: `shared/skills/proposal-critique/SKILL.md` (leer y ejecutar inline)
 - Output: `deals/[NombreDeal]/04-evaluation/proposal-critique.md`
 - Interactividad: BAJA
 - Requiere: Todos los documentos del deal
@@ -62,7 +62,7 @@ Analizar propuesta desde perspectiva de comprador/negociador.
 
 Validar cualquier documento antes de cerrarlo.
 
-- Skill: `/agent qa-gate`
+- Skill: `shared/skills/qa-gate/SKILL.md` (leer y ejecutar inline)
 - Output: `deals/[NombreDeal]/scratch/qa-[tipo]-[fecha].md`
 - Interactividad: NINGUNA
 
@@ -70,6 +70,6 @@ Validar cualquier documento antes de cerrarlo.
 
 Para preguntas abiertas de estrategia fuera del pipeline de deal.
 
-- Agente: `/agent hormozi-strategist`
+- Agente: `/agent hormozi-strategist` (unico subagente, se invoca con /agent)
 - No requiere output de archivo
 - No forma parte del pipeline de documentos

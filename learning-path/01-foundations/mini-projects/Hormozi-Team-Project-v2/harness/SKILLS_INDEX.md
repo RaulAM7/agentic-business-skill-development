@@ -2,22 +2,24 @@
 
 Skills del Hormozi Team Project v2 para el pipeline de deals.
 
+Las skills son procedimientos en `shared/skills/[nombre]/SKILL.md`. Claude los lee y ejecuta inline — NO son subagentes.
+
 ## Catalogo
 
 | # | Skill | Archivo | Interactividad | Trigger |
 |---|-------|---------|----------------|---------|
-| 1 | context-curation | `.claude/agents/context-curation.md` | BAJA | El usuario tiene materiales brutos de cliente para procesar |
-| 2 | customer-mapping | `.claude/agents/customer-mapping.md` | ALTA | Existe documento de contexto, necesita interpretacion Hormozi |
-| 3 | offer-design | `.claude/agents/offer-design.md` | ALTA | Existe customer map, necesita disenar oferta |
-| 4 | template-formatting | `.claude/agents/template-formatting.md` | BAJA-MEDIA | Existe oferta, necesita propuesta formal |
-| 5 | proposal-critique | `.claude/agents/proposal-critique.md` | BAJA | Existe propuesta, necesita evaluacion de comprador |
-| 6 | qa-gate | `.claude/agents/qa-gate.md` | NINGUNA | Cualquier documento necesita validacion antes de cierre |
+| 1 | context-curation | `shared/skills/context-curation/SKILL.md` | BAJA | El usuario tiene materiales brutos de cliente para procesar |
+| 2 | customer-mapping | `shared/skills/customer-mapping/SKILL.md` | ALTA | Existe documento de contexto, necesita interpretacion Hormozi |
+| 3 | offer-design | `shared/skills/offer-design/SKILL.md` | ALTA | Existe customer map, necesita disenar oferta |
+| 4 | template-formatting | `shared/skills/template-formatting/SKILL.md` | BAJA-MEDIA | Existe oferta, necesita propuesta formal |
+| 5 | proposal-critique | `shared/skills/proposal-critique/SKILL.md` | BAJA | Existe propuesta, necesita evaluacion de comprador |
+| 6 | qa-gate | `shared/skills/qa-gate/SKILL.md` | NINGUNA | Cualquier documento necesita validacion antes de cierre |
 
-## Agente (no es skill)
+## Agente (unico subagente del proyecto)
 
-| Agente | Archivo | Trigger |
-|--------|---------|---------|
-| hormozi-strategist | `.claude/agents/hormozi-strategist.md` | Preguntas abiertas de estrategia de negocio |
+| Agente | Archivo | Invocacion | Trigger |
+|--------|---------|------------|---------|
+| hormozi-strategist | `.claude/agents/hormozi-strategist.md` | `/agent hormozi-strategist` | Preguntas abiertas de estrategia de negocio |
 
 ## Grafo de dependencias
 
@@ -41,7 +43,8 @@ materiales brutos -> [context-curation] -> context-document
 
 `[hormozi-strategist]` es independiente — no forma parte del pipeline.
 
-## Invocacion
+## Ejecucion
 
-Todas las skills se invocan via `/agent [nombre-skill]`.
-El agente estrategico se invoca via `/agent hormozi-strategist`.
+**Skills (pipeline)**: Claude lee el SKILL.md y ejecuta el procedimiento inline en la conversacion principal. No se usa `/agent`.
+
+**Agente (consultoria)**: se invoca con `/agent hormozi-strategist`. Spawna un subagente separado.
