@@ -1,0 +1,376 @@
+# Propuesta — IA360 Operations Stack
+
+## De 1,5 semanas/mes reorganizando carpetas a 3 horas/mes supervisando sistemas que trabajan por ti -- en 90 dias, sin perder control fiscal ni confiar en cajas negras.
+
+**Los titulares de esta propuesta**
+
+Este proyecto construye la infraestructura operativa automatizada que elimina el trabajo manual repetitivo en gestion documental, comunicaciones recurrentes y arquitectura de negocio, para que Yanira opere como asesora estrategica lider en Canarias -- no como operaria contable atrapada en reorganizar carpetas los fines de semana.
+
+El proyecto se estructura en un paquete unico con dos bloques de trabajo: Implantacion Tecnologica (sistemas operativos) + Consultoria y Mentoring (modelo de negocio y acompanamiento). Primeros resultados visibles antes del dia 14.
+
+---
+
+## 1. Objeto de la propuesta
+
+El objeto de esta propuesta es **construir la infraestructura operativa automatizada que elimina el 80% del trabajo manual repetitivo en gestion documental, comunicaciones recurrentes y arquitectura de negocio**, empezando por Document Intelligence (Drive) + Email Ops Automation + Pricing/Offer Architecture, **sin perder control humano, criterio profesional, ni fiabilidad fiscal**.
+
+Este proyecto **no consiste en instalar software de automatizacion generico que promete y falla**, sino en **disenar un sistema operativo personalizado para Yanira Leyva** que:
+
+- Clasifica automaticamente documentos subidos por clientes en carpetas correctas (ingresos/gastos/trimestre) sin reorganizacion manual
+- Envia recordatorios mensuales y trimestrales automaticamente sin programacion manual cada mes
+- Estructura niveles de servicio diferenciados con precios defendibles y contratos claros para nuevos clientes
+- Integra IA como vehiculo operativo que multiplica capacidad del experto humano, nunca como sustituto del criterio fiscal profesional
+
+**No se trata de contratar mas software contable.**
+**Se trata de construir la capacidad de operar como lider estrategica mientras los demas siguen ahogados en Excel.**
+
+---
+
+## 2. Contexto, necesidad detectada y objetivos
+
+Yanira Leyva gestiona una asesoria fiscal profesional con 200-250 clientes (mix nacional + Canarias), operando como profesional independiente en colaboracion con dos asesorias externas.
+
+**El problema no es falta de organizacion personal.**
+**El problema es que la infraestructura actual genera mas trabajo del que elimina.**
+
+### Situacion actual
+
+- **Cada cliente sube documentacion sin clasificar a Drive/iCloud** -- Yanira dedica 1,5-2 horas por cliente medio (4 horas en clientes de alto volumen) reorganizando manualmente facturas en carpetas de ingresos/gastos/trimestre
+- **El software contable (Dias Software/Cegid) falla sistematicamente**: OCR no procesa ~27% de facturas, duplica bienes de inversion entre trimestres, instalacion local que genera conflictos en Mac, soporte tecnico deficiente
+- **Modelo de precios plano sin relacion con carga de trabajo real**: tarifa fija por tipo de cliente sin diferenciar volumen ni complejidad, servicios extras realizados gratis por costumbre, sin contrato formal que delimite alcance
+- **Comunicaciones programadas manualmente cada mes**: recordatorios mensuales de documentacion sin automatizacion
+
+### Consecuencias directas
+
+**Tiempo operativo que devora capacidad estrategica** -- Aproximadamente 1,5 semanas/mes dedicadas a tareas manuales repetitivas sin valor anadido (organizar documentos, contabilizar facturas que el OCR rechazo, reorganizar carpetas los fines de semana). Ese tiempo roba la posibilidad de ofrecer servicios premium.
+
+**Doble revision obligatoria que anula el beneficio de la automatizacion** -- El software promete automatizar pero genera errores sistemicos, obligando a revisar trimestre completo cada 3 meses (2-3 dias) para detectar bienes de inversion duplicados, IVA incorrecto, porcentajes mal calculados.
+
+**Modelo de negocio que castiga a la mejor clienta** -- Sin estructura de niveles de servicio ni precios diferenciados, Yanira absorbe personalmente las diferencias entre cliente de bajo volumen y cliente de alto volumen. Los clientes nuevos entran sin contrato formal que delimite que servicios estan incluidos y cuales no.
+
+### Objetivos del proyecto
+
+Este proyecto persigue tres resultados, de menor a mayor impacto:
+
+1. **Recuperar control operativo** -- De 1,5 semanas/mes en trabajo manual a maximo 2-3h/mes en supervision de excepciones. Sistemas fiables que ejecutan trabajo operativo de bajo nivel.
+2. **Reducir riesgo de escalado** -- Desacoplar crecimiento de clientes de crecimiento lineal de horas de trabajo. Nuevos clientes entran con contrato, pricing claro y expectativas definidas desde Dia 1.
+3. **Posicionarse como referente de mercado** -- Infraestructura operativa + arquitectura de negocio que otros profesionales tardaran anos en replicar, liberando tiempo para servicios premium (subvenciones, asesoramiento personalizado, formacion continua).
+
+---
+
+## 3. Como funciona (5 pasos)
+
+**Paso 1 -- Piloto rapido.** Configuramos Document Intelligence con 3 clientes reales de perfil diferente (bajo, medio y alto volumen). Suben documentacion como siempre. El sistema clasifica en carpetas correctas (ingresos/gastos/trimestre). Yanira verifica que funciona. Primer resultado visible antes de Dia 14.
+
+**Paso 2 -- Automatizacion operativa.** Email Ops Automation envia recordatorios mensuales y trimestrales sin programacion manual. Implementamos plantilla de contrato y tabla de pricing diferenciado para nuevos clientes.
+
+**Paso 3 -- Expansion controlada.** Document Intelligence se extiende progresivamente a mas clientes. Ajustamos reglas de clasificacion segun excepciones reales detectadas en piloto. Arrancamos Value Ladder + ERP Selection Sprint.
+
+**Paso 4 -- Stress Test.** El sistema se somete a prueba objetiva con criterios predefinidos en contrato: minimo 85% precision en clasificacion de 50 documentos reales, 2 ciclos de email automatico completados, 1 cliente nuevo con contrato firmado. Si no pasa, reembolso 100%.
+
+**Paso 5 -- Produccion + transferencia.** Sistema integrado en operativa diaria. Formacion completa. SOPs entregados. Autonomia total. Decision de ERP lista + Communications Playbook funcionando.
+
+En cada paso, Yanira mantiene control total. La IA clasifica y ejecuta. Yanira supervisa y decide. Nunca al reves.
+
+
+### Principios metodologicos
+
+- **La IA multiplica capacidad del experto humano, nunca lo sustituye.** El criterio fiscal profesional de Yanira es insustituible. La IA ejecuta trabajo manual repetitivo; las decisiones fiscales criticas siempre requieren supervision humana.
+- **Revision por excepcion, no revision sistematica de todo.** El sistema marca casos ambiguos para revision humana. No requiere revisar todo.
+- **Trazabilidad completa.** Toda accion del sistema queda registrada, auditable y transparente. Las reglas de clasificacion son visibles y modificables.
+- **Validacion antes de produccion.** Ningun sistema entra en operativa real sin superar el Stress Test Day 60.
+
+### Primeros resultados: antes de Dia 14
+
+No esperas 3 meses para ver si esto funciona.
+
+En la primera sesion (Semana 1), seleccionamos 3 clientes piloto. Configuramos Document Intelligence con las reglas de clasificacion basadas en la metodologia actual de Yanira. Los clientes suben documentacion como siempre.
+
+**Antes de la segunda sesion**, Yanira verifica que los documentos se clasificaron correctamente en ingresos/gastos/trimestre sin su intervencion. Si funciona con 3, funciona con 250. Si no funciona con 3, lo arreglamos antes de avanzar.
+
+Esto no es una promesa vaga de "resultados en 90 dias." Es un piloto funcional en 14 dias que demuestra que el sistema trabaja antes de invertir mas tiempo ni confianza.
+
+---
+
+## 4. Diseno del proyecto
+
+La solucion se estructura en **un paquete unico con dos bloques de trabajo complementarios**: uno tecnologico (sistemas operativos) y otro estrategico (modelo de negocio y acompanamiento).
+
+### 4.1. STACK 1 -- Implantacion Tecnologica
+
+**Sistemas operativos que eliminan el trabajo manual repetitivo: documentos, email y procesamiento contable.**
+
+#### Que se construye
+
+**Document Intelligence System (completo):**
+- Clasificacion automatica de documentos subidos por clientes en carpetas correctas (ingresos/gastos/trimestre)
+- Renombrado o etiquetado segun reglas predefinidas para facilitar busqueda posterior
+- Logging automatico de actividad para trazabilidad completa
+- Reglas adicionales para casos especiales (facturas simplificadas, tickets, escaneos borrosos)
+- Dashboard de actividad para detectar errores sistematicos
+- *Entregado cuando: el sistema clasifica correctamente minimo 85% de 50 documentos reales de 3 clientes diferentes en Stress Test Day 60 + dashboard funcional con datos reales*
+
+**Email Ops Automation:**
+- Recordatorios mensuales de documentacion enviados automaticamente sin programacion manual
+- Recordatorios de cierre trimestral segun calendario fiscal predefinido
+- Mensajes de bienvenida para nuevos clientes con nivel de servicio claro
+- *Entregado cuando: 2 ciclos completos de recordatorios mensuales se envian automaticamente sin intervencion manual*
+
+**OCR / Accounting Ops:**
+- Configuracion inicial de OCR fiscal integrada con Document Intelligence
+- Procesamiento automatico de facturas estandar con revision por excepcion para casos ambiguos
+- Reglas de validacion basica para detectar errores comunes (duplicados, formato incorrecto)
+- *Entregado cuando: OCR procesa facturas estandar de 3 clientes piloto con tasa de rechazo < 15% en formato reconocible*
+
+**Nota sobre OCR:** El alcance cubre procesamiento de facturas estandar y deteccion de errores comunes. No incluye validadores fiscales avanzados ni conciliacion bancaria automatica -- eso requiere un ERP validado (Fase 2, post-seleccion de ERP en STACK 2).
+
+#### Que recibes (toolkit tecnologico)
+
+- SOP de Document Intelligence System (reglas estandar + casos especiales)
+- SOP de Email Ops Automation
+- 10+ plantillas de email segmentadas por etapa y tipo de cliente (bienvenida, recordatorios, cierre trimestral, upsell, renovacion, referidos)
+- Dashboard de Document Intelligence (logging + actividad)
+- SOP de OCR / Accounting Ops
+- Timing optimizado + segmentacion por tipo de cliente y nivel de servicio
+
+#### Que NO incluye STACK 1
+
+- No incluye validadores fiscales avanzados ni conciliacion bancaria automatica (requiere ERP validado, Fase 2)
+- No incluye migracion de ERP (la seleccion se hace en STACK 2; la migracion es Fase 2, meses 4-6)
+- No incluye WhatsApp Intelligence ni busqueda automatica de subvenciones (Fase 3 opcional)
+- No incluye desarrollo de software a medida -- usamos herramientas existentes configuradas para la operativa de Yanira
+
+---
+
+### 4.2. STACK 2 -- Consultoria + Mentoring
+
+**Arquitectura de negocio, pricing, segmentacion, seleccion de ERP y sistema de comunicaciones estrategicas.**
+
+#### Que se construye
+
+**Value Ladder completo:**
+- Diseno de 3-4 niveles de servicio diferenciados (basico, medio, alto volumen, VIP opcional)
+- Reglas detalladas de "que entra / que no entra" por nivel
+- *Entregado cuando: documento de Value Ladder aprobado por Yanira con niveles, reglas y precios definidos*
+
+**Plantilla de contrato + tabla de pricing diferenciado:**
+- Delimita que servicios estan incluidos y cuales son extras facturables
+- Fundamenta precios diferenciados en carga de trabajo real
+- *Entregado cuando: minimo 1 cliente nuevo incorporado con contrato y nivel de servicio definido usando plantilla implementada*
+
+**ERP Selection Sprint completo:**
+- Research exhaustivo + shortlist de 3-5 opciones cloud + criterios de evaluacion ponderados (fiabilidad OCR, conciliacion bancaria integrada, soporte Mac, pricing)
+- Demos guiadas con proveedores + decision final + plan de migracion detallado (ejecucion Fase 2)
+- *Entregado cuando: shortlist evaluada, demos completadas, decision final tomada, plan de migracion documentado*
+
+**Communications Playbook avanzado:**
+- 10+ mensajes tipo por etapa del cliente (bienvenida, recordatorios, cierre trimestral, upsell, renovacion, referidos)
+- Timing optimizado + segmentacion por tipo de cliente y nivel de servicio
+- *Entregado cuando: playbook documentado con minimo 10 mensajes tipo listos para usar*
+
+**Onboarding System completo:**
+- Sistema de intake que captura nivel de servicio + expectativas + alcance desde primer contacto
+- *Entregado cuando: formulario de intake + flujo de onboarding documentado y probado con minimo 1 cliente*
+
+#### Que recibes (toolkit estrategico)
+
+- Value Ladder completo (3-4 niveles de servicio documentados)
+- Plantilla de contrato para nuevos clientes
+- Tabla de pricing diferenciado (por nivel de servicio)
+- Matriz de criterios de evaluacion ERP (ponderada, lista para usar)
+- Onboarding intake form (captura nivel de servicio desde Dia 1)
+- Playbook de comunicacion estrategica (mensajes, timing, segmentacion)
+
+#### Guardarrail clave
+
+El sistema no toma decisiones de pricing ni de ERP por Yanira. Disena opciones fundamentadas y acompana la decision final. El criterio profesional y conocimiento del negocio de Yanira siempre prevalece.
+
+#### Que NO incluye STACK 2
+
+- No incluye cambiar precios a clientes historicos -- disenamos la estructura y las herramientas; Yanira decide cuando y como aplicarla
+- No incluye ejecucion de migracion de ERP -- seleccionamos el ERP correcto; la migracion es Fase 2 (opcional, meses 4-6)
+
+---
+
+### 4.3. Acompanamiento (transversal a ambos stacks)
+
+- **8 sesiones de implementacion** (1h semanal): instalacion de sistemas + formacion operativa + diseno estrategico + resolucion de dudas
+- **2 sesiones de seguimiento** (mes 3 + mes 6): validacion de metricas + ajustes + transferencia de conocimiento
+- *Entregado cuando: 10 sesiones completadas + SOPs completos de todos los sistemas entregados para autonomia total*
+
+Las sesiones cubren ambos stacks de forma integrada. No hay sesiones separadas por bloque.
+
+---
+
+### 4.4. Que NO incluye el proyecto (y por que) + Proceso de cambios
+
+**Exclusiones consolidadas:**
+
+- **No incluye migracion de ERP.** Este proyecto selecciona el ERP correcto con criterios objetivos. La migracion es Fase 2 (opcional, meses 4-6), cuando la infraestructura operativa este validada y funcionando.
+- **No incluye Accounting Ops AI avanzado** (validadores fiscales completos, conciliacion bancaria automatica). Eso requiere un ERP validado. Este proyecto incluye OCR basico integrado con Document Intelligence.
+- **No incluye WhatsApp Intelligence** ni busqueda automatica de subvenciones. Eso es Fase 3 (opcional).
+- **No incluye cambiar precios a clientes historicos.** Disenamos la estructura y las herramientas. Yanira decide cuando y como aplicarla.
+- **No incluye desarrollo de software a medida.** Usamos herramientas existentes configuradas para la operativa de Yanira, no construimos desde cero.
+
+**Proceso de cambios:**
+
+Si durante el proyecto se necesita anadir algo fuera de este alcance: lo evaluamos juntos, proporcionamos estimacion de coste y tiempo, y Yanira decide sin presion. Nada se anade sin aprobacion explicita por escrito.
+
+---
+
+## 5. Resultados esperados
+
+### 5.1. Resultados del proyecto
+
+| Resultado | Metrica |
+|-----------|---------|
+| Reduccion de tiempo de organizacion manual | De 1,5 semanas/mes (36h acumuladas) a maximo 2-3h/mes en supervision de excepciones |
+| Comunicaciones automaticas | Recordatorios mensuales y trimestrales sin programacion manual (0 min/mes de configuracion) |
+| Nuevos clientes con contrato | 100% de clientes nuevos (post-implementacion) con nivel de servicio definido y alcance delimitado |
+| Carpetas organizadas automaticamente | Clientes suben como siempre, sistema clasifica en carpetas correctas |
+| Trazabilidad completa | Logging automatico de clasificacion con nivel de confianza + dashboard de actividad |
+| Autonomia total post-proyecto | Yanira puede modificar reglas, plantillas y pricing sin depender de proveedor externo |
+| Value Ladder implementado | 3-4 niveles de servicio con reglas de "que entra / que no entra" y precios diferenciados |
+| Decision de ERP lista | Shortlist evaluada, demos completadas, plan de migracion documentado |
+| Communications Playbook | 10+ mensajes tipo por etapa del cliente con timing y segmentacion |
+| Onboarding sistematizado | Sistema de intake que captura nivel de servicio desde primer contacto |
+| OCR fiscal basico operativo | Procesamiento automatico de facturas estandar con revision por excepcion |
+| Ventaja competitiva defensible | Infraestructura operativa + arquitectura de negocio que otros tardaran anos en replicar |
+
+### 5.2. Como se vive ese resultado
+
+- **En control**: los sistemas funcionan de verdad, no prometen y fallan
+- **Confianza tecnologica restaurada**: la automatizacion esta disenada con capa de validacion y revision por excepciones
+- **Liberacion temporal**: 1,5 semanas/mes recuperadas para servicios premium, formacion, vida personal
+- **Claridad estrategica**: saber que cobrar, a quien, por que, y poder defender los precios con estructura contractual clara
+- **Sin fines de semana reorganizando carpetas**: el viernes a las 18h, el laptop se cierra sabiendo que el lunes no hay carpetas pendientes
+
+---
+
+## 6. Que tiene que hacer Yanira (inputs minimos)
+
+Este proyecto esta disenado como infraestructura done-for-you con acompanamiento guiado. La carga sobre Yanira es minima y acotada:
+
+| Input requerido | Dedicacion |
+|-----------------|------------|
+| Asistir a sesiones semanales de implementacion | 1h/semana (8 sesiones) |
+| Dar acceso a carpetas de Drive de 3 clientes piloto | Una vez, Semana 1 |
+| Revisar y validar reglas de clasificacion del piloto | 30 min antes de Semana 2 |
+| Aprobar plantillas de email antes de activacion | 30 min, Semana 3 |
+| Decidir niveles de pricing para nuevos clientes | 1 decision, con framework ya preparado |
+| Asistir a demos de ERP con proveedores | 2-3 demos de 1h |
+| Aprobar Value Ladder y Communications Playbook | 1h de revision |
+
+**Nosotros hacemos el resto**: configuracion tecnica, diseno de reglas, plantillas, SOPs, testing, ajustes.
+
+**Lo que NO se pide a Yanira:**
+- No tiene que aprender herramientas tecnicas
+- No tiene que configurar nada ella misma
+- No tiene que cambiar como trabaja hasta que el sistema este validado
+
+---
+
+## 7. Condiciones
+
+### 7.1. Inversion
+
+| Concepto | Detalle |
+|----------|---------|
+| **Programa** | IA360 Operations Stack |
+| **Duracion estimada** | 8-12 semanas |
+| **Tipo de solucion** | Implantacion Tecnologica + Consultoria y Mentoring (paquete unico) |
+
+**Valor del sistema desglosado:**
+
+| Entregable | Valor de referencia |
+|------------|:-------------------:|
+| **STACK 1 -- Implantacion Tecnologica** | |
+| Document Intelligence System completo (diseno + configuracion + testing + casos especiales + dashboard) | [POR DEFINIR] |
+| Email Ops Automation (calendario + plantillas + triggers + segmentacion) | [POR DEFINIR] |
+| OCR / Accounting Ops basico (procesamiento facturas + validacion basica) | [POR DEFINIR] |
+| **STACK 2 -- Consultoria + Mentoring** | |
+| Value Ladder completo (3-4 niveles de servicio) | [POR DEFINIR] |
+| Plantilla de contrato + tabla pricing diferenciado | [POR DEFINIR] |
+| ERP Selection Sprint (research + demos + decision + plan migracion) | [POR DEFINIR] |
+| Communications Playbook avanzado (10+ mensajes segmentados) | [POR DEFINIR] |
+| Onboarding System completo | [POR DEFINIR] |
+| **Acompanamiento** | |
+| 8 sesiones de implementacion (1h semanal) | [POR DEFINIR] |
+| 2 sesiones de seguimiento (mes 3 + mes 6) | [POR DEFINIR] |
+| SOPs completos para autonomia total | [POR DEFINIR] |
+| **Valor total del sistema** | **[POR DEFINIR]** |
+| Descuento especial Yanira Leyva | [POR DEFINIR] |
+| **PRECIO UNICO DEL PROYECTO** | **[POR DEFINIR]** |
+
+**Condiciones de pago:**
+- Opcion A: [POR DEFINIR]
+- Opcion B: [POR DEFINIR]
+
+---
+
+#### Costes operativos mensuales (post-proyecto)
+
+El uso de servicios externos necesarios para el funcionamiento del sistema no esta incluido en el precio del proyecto. Estos costes se facturan directamente por los proveedores terceros (sin markup).
+
+| Servicio | Coste estimado |
+|----------|:--------------:|
+| Google Workspace (Drive, email) | Ya contratado por Yanira |
+| API IA para clasificacion de documentos | [RANGO ESTIMADO: EUR/mes] |
+| Servicio de email automation | [RANGO ESTIMADO: EUR/mes] |
+| **Total estimado mensual** | **[RANGO ESTIMADO: EUR/mes]** |
+
+Se proporcionara estimacion detallada antes de firma de contrato.
+
+---
+
+### 7.2. Garantia -- Validacion Operativa Day 60
+
+**Si no funciona, no pagas. Asi de simple.**
+
+Antes del Dia 60, el sistema se somete a un Stress Test con 3 criterios objetivos definidos en contrato:
+
+1. **Document Intelligence** clasifica correctamente minimo 85% de 50 documentos reales de 3 clientes diferentes
+2. **Email Automation** completa 2 ciclos de recordatorios mensuales sin intervencion manual
+3. **1 cliente nuevo** incorporado con contrato y nivel de servicio definido
+
+Si alguno de estos 3 criterios NO se cumple: **reembolso del 100%. Sin penalizaciones. Sin discusiones.**
+
+No validamos si "gusta." Validamos si funciona.
+
+**Checkpoint intermedio (Semana 4):** Si Document Intelligence no funciona en piloto para ese momento, paramos, revisamos, y Yanira decide si continuamos o cortamos con reembolso proporcional. No hay que esperar 60 dias para saber si el proyecto va por buen camino.
+
+**Nota sobre ERP Selection Sprint:** La garantia cubre que la decision esta fundamentada con research, criterios objetivos, demos completadas y plan de migracion documentado. No garantiza que el ERP seleccionado resuelva todos los problemas operativos (eso depende del proveedor del ERP, no de este proyecto).
+
+**El riesgo es nuestro. El control es de Yanira.**
+
+---
+
+### 7.3. Credenciales y experiencia
+
+[POR DEFINIR: Incluir aqui 1-3 elementos de prueba relevantes -- caso de estudio anonimizado, credenciales profesionales, experiencia en sector de asesorias fiscales, o cualquier referencia que fundamente la capacidad de ejecucion del equipo.]
+
+---
+
+## 8. Cierre
+
+No estas comprando automatizacion ni software. Estas construyendo la infraestructura operativa que te permite evolucionar de asesora fiscal competente a lider de mercado en Canarias con servicios premium que hoy no tienes tiempo de ofrecer. Los demas seguiran ahogados en Excel. Tu operaras con sistemas que multiplican tu capacidad sin sacrificar fines de semana.
+
+---
+
+## 9. Proximos pasos
+
+| Paso | Que ocurre |
+|------|------------|
+| **1. Confirmar** | Responder a esta propuesta: "vamos adelante" |
+| **2. Kickoff** | Programamos sesion de kickoff en las proximas 48h |
+| **3. Firma + primer pago** | Firma de contrato con garantia Day 60 incluida + condiciones de pago acordadas |
+| **4. Semana 1 arranca** | Seleccion de 3 clientes piloto + configuracion de Document Intelligence |
+| **5. Dia 14** | Primer resultado visible: piloto funcionando |
+
+**Contacto:**
+
+**Email:** [POR DEFINIR]
+
+**Web:** [POR DEFINIR]
+
+**Telefono:** [POR DEFINIR]
