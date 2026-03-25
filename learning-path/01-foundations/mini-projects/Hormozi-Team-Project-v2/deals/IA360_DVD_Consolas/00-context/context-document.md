@@ -162,26 +162,36 @@ Equivale a **mas de 68 jornadas laborales completas**. Un tecnico trabaja casi 3
 
 ## 3️⃣ Requisitos funcionales (destilados a nivel estrategico)
 
-### MUST — Imprescindibles
+Los requisitos del cliente se agrupan en dos ambitos tematicos claramente diferenciados:
+
+- **Ambito A — Atencion y relacion con el cliente**: Comunicacion, visibilidad, seguimiento, recurrencia. Es el nucleo emocional del caso y el scope de este proyecto.
+- **Ambito B — Administrativo y logistico**: Busqueda de repuestos, facturacion, gestion de stock. Son dolores reales y cuantitativamente pesados, pero quedan fuera del scope de esta fase. Podrian abordarse en una capa de consultoria posterior.
+
+### AMBITO A — Atencion y relacion con el cliente (scope del proyecto)
+
+#### MUST — Imprescindibles
 
 - Avisos automaticos al cliente vinculados a cambios de estado internos de la reparacion (estado cambia → mensaje se dispara sin intervencion humana)
 - Tono humano en toda comunicacion automatizada — condicion innegociable del cliente. Si la comunicacion suena robotica, la solucion falla
 - Visibilidad para el cliente del estado de su reparacion (panel, enlace o equivalente funcional) con estado, fotos y presupuesto
 - Unificacion de canales de WhatsApp en un punto central con trazabilidad
-- Busqueda centralizada de repuestos con comparacion de proveedores (precio, stock, calidad)
 
-### SHOULD — Muy importantes
+#### SHOULD — Muy importantes
 
 - Recordatorios automaticos de mantenimiento para clientes existentes (ciclo anual)
 - Respuesta automatizada a preguntas frecuentes basicas (ubicacion, horario, servicios disponibles)
 - Historico centralizado de conversaciones con cada cliente (trazabilidad independiente de quien escribio)
-- Integracion o compatibilidad con ERP Divergest (ya en uso)
-
-### COULD — Deseables
-
-- Reconocimiento automatico de articulos en facturas de proveedor para entrada a stock
 - Alertas internas cuando una reparacion lleva demasiado tiempo sin movimiento
+
+#### COULD — Deseables
+
+- Integracion o compatibilidad con ERP Divergest (ya en uso)
 - Generacion asistida de presupuestos (el cliente reconoce que esto es mas dificil y personalizado)
+
+### AMBITO B — Administrativo y logistico (fuera de scope, referencia para consultoria)
+
+- Busqueda centralizada de repuestos con comparacion de proveedores (precio, stock, calidad) — 200h/ano de coste, mayor cuello de botella invisible, pero requiere desarrollo especifico fuera del rango de este proyecto
+- Reconocimiento automatico de articulos en facturas de proveedor para entrada a stock — el cliente lo desea pero es una solucion tecnica diferente al nucleo de atencion al cliente
 
 ---
 
