@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DVD Consolas — Propuesta de Proyecto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0E1B4D;
+  --midnight: #142A6B;
+  --coral: #F28B82;
+  --orange: #F4A261;
+  --terracotta: #D9826A;
+  --red: #E0483F;
+  --yellow: #F2C879;
+  --mint: #7ED1B2;
+  --ivory: #F6F1E9;
+  --peach: #F3D6C5;
+  --slate: #566A8F;
+  --charcoal: #2E3A55;
+  --bg: #F8F7F4;
+  --border: #E2E0DC;
+  --card-shadow: 0 2px 12px rgba(14, 27, 77, 0.06);
+
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--charcoal);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== HEADER ========== */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-logo {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.brand-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+}
+
+.brand-subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--slate);
+}
+
+/* ========== TAB NAVIGATION ========== */
+.tab-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.tab-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--slate);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  border-color: var(--navy);
+  color: var(--navy);
+}
+
+.tab-btn.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+/* ========== MAIN CONTAINER ========== */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== SECTION HEADERS ========== */
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.section-label--navy {
+  background: rgba(14, 27, 77, 0.06);
+  color: var(--midnight);
+}
+
+.section-label--mint {
+  background: rgba(126, 209, 178, 0.15);
+  color: #0B6E4F;
+}
+
+.section-label--orange {
+  background: rgba(244, 162, 97, 0.12);
+  color: #B8602A;
+}
+
+.section-title {
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.section-title--gradient {
+  background: linear-gradient(135deg, #0E1B4D 0%, #142A6B 50%, #0B6E4F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: clamp(14px, 2vw, 17px);
+  color: var(--slate);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ========== CARDS ========== */
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(14, 27, 77, 0.1);
+}
+
+.card--dark {
+  background: var(--navy);
+  border: 2px solid var(--mint);
+  color: #fff;
+  box-shadow: 0 4px 32px rgba(14, 27, 77, 0.18);
+}
+
+.card--dark:hover {
+  box-shadow: 0 8px 40px rgba(14, 27, 77, 0.25);
+}
+
+/* ========== TAB 1: DIAGNOSTICO ========== */
+.pain-quote {
+  background: linear-gradient(135deg, rgba(224, 72, 63, 0.06) 0%, rgba(242, 139, 130, 0.08) 100%);
+  border: 1px solid rgba(224, 72, 63, 0.15);
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.pain-quote blockquote {
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.pain-quote cite {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--slate);
+  font-style: normal;
+}
+
+.metrics-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.metric-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+}
+
+.metric-number {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.metric-number--red { color: var(--red); }
+.metric-number--orange { color: var(--orange); }
+.metric-number--navy { color: var(--navy); }
+
+.metric-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--slate);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-source {
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(86, 106, 143, 0.6);
+  margin-top: 6px;
+  line-height: 1.3;
+  font-style: italic;
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.problem-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.problem-card:hover {
+  background: #F0EFEB;
+  border-color: var(--midnight);
+  transform: translateY(-2px);
+}
+
+.problem-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.problem-icon--red {
+  background: rgba(224, 72, 63, 0.08);
+}
+
+.problem-icon--orange {
+  background: rgba(244, 162, 97, 0.1);
+}
+
+.problem-icon--yellow {
+  background: rgba(242, 200, 121, 0.15);
+}
+
+.problem-content h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.problem-content p {
+  font-size: 13px;
+  color: var(--slate);
+  line-height: 1.5;
+}
+
+.problem-weight {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.problem-weight--critical {
+  background: rgba(224, 72, 63, 0.1);
+  color: var(--red);
+}
+
+.problem-weight--high {
+  background: rgba(244, 162, 97, 0.12);
+  color: #B8602A;
+}
+
+.problem-weight--medium {
+  background: rgba(242, 200, 121, 0.2);
+  color: #8A6D1B;
+}
+
+.insight-block {
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 40px 32px;
+  color: #fff;
+  text-align: center;
+}
+
+.insight-block h3 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mint);
+  margin-bottom: 16px;
+}
+
+.insight-block p {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 600;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.insight-block p strong {
+  color: var(--mint);
+}
+
+/* ========== TAB 2: SOLUCION ========== */
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 56px;
+}
+
+.objective-card {
+  border-top: 3px solid;
+  padding-top: 4px;
+}
+
+.objective-card--1 { border-color: var(--mint); }
+.objective-card--2 { border-color: var(--yellow); }
+.objective-card--3 { border-color: var(--orange); }
+
+.objective-inner {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 0 0 16px 16px;
+  padding: 24px;
+  height: 100%;
+  box-shadow: var(--card-shadow);
+}
+
+.objective-number {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.objective-number--1 { color: #0B6E4F; }
+.objective-number--2 { color: #8A6D1B; }
+.objective-number--3 { color: #B8602A; }
+
+.objective-inner h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.objective-inner p {
+  font-size: 13px;
+  color: var(--slate);
+  line-height: 1.5;
+}
+
+.stack-section {
+  margin-bottom: 56px;
+}
+
+.stack-label {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.layer-card {
+  border-radius: 20px;
+  padding: 32px 28px;
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.layer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(14, 27, 77, 0.1);
+}
+
+.layer-card--ai {
+  background: var(--navy);
+  border: 2px solid var(--mint);
+  color: #fff;
+  box-shadow: 0 4px 32px rgba(14, 27, 77, 0.18);
+}
+
+.layer-card--ai:hover {
+  box-shadow: 0 8px 40px rgba(14, 27, 77, 0.25);
+}
+
+.layer-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.layer-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.layer-icon--foundation {
+  background: rgba(126, 209, 178, 0.15);
+}
+
+.layer-icon--intelligence {
+  background: rgba(126, 209, 178, 0.2);
+}
+
+.layer-card--ai .layer-icon--intelligence {
+  background: rgba(126, 209, 178, 0.2);
+}
+
+.layer-icon--growth {
+  background: rgba(244, 162, 97, 0.12);
+}
+
+.layer-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.layer-badge--foundation {
+  background: rgba(126, 209, 178, 0.15);
+  color: #0B6E4F;
+}
+
+.layer-badge--intelligence {
+  background: rgba(126, 209, 178, 0.2);
+  color: #0B6E4F;
+}
+
+.layer-card--ai .layer-badge--intelligence {
+  background: rgba(126, 209, 178, 0.2);
+  color: var(--mint);
+}
+
+.layer-badge--growth {
+  background: rgba(244, 162, 97, 0.12);
+  color: #B8602A;
+}
+
+.layer-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.layer-card--ai .layer-title {
+  background: linear-gradient(135deg, var(--mint), #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.layer-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.layer-items li {
+  font-size: 13px;
+  line-height: 1.5;
+  padding-left: 24px;
+  position: relative;
+}
+
+.layer-items li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.layer-items--mint li::before { background: var(--mint); }
+.layer-items--yellow li::before { background: var(--yellow); }
+.layer-items--orange li::before { background: var(--orange); }
+
+.layer-card--ai .layer-items li {
+  color: rgba(255,255,255,0.85);
+}
+
+.gift-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(244, 162, 97, 0.15);
+  color: var(--orange);
+  margin-top: 12px;
+}
+
+/* Guarantee */
+.guarantee-section {
+  margin-bottom: 56px;
+}
+
+.guarantee-card {
+  background: #fff;
+  border: 2px solid var(--mint);
+  border-radius: 24px;
+  padding: 40px 32px;
+  box-shadow: 0 4px 24px rgba(126, 209, 178, 0.12);
+}
+
+.guarantee-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.guarantee-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(126, 209, 178, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.guarantee-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.guarantee-subtitle {
+  font-size: 13px;
+  color: var(--slate);
+}
+
+.guarantee-body {
+  margin-bottom: 20px;
+}
+
+.guarantee-body p {
+  font-size: 14px;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.criteria-item {
+  background: rgba(126, 209, 178, 0.06);
+  border: 1px solid rgba(126, 209, 178, 0.2);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.criteria-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.criteria-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.guarantee-refund {
+  background: var(--navy);
+  border-radius: 14px;
+  padding: 20px 24px;
+  color: #fff;
+  text-align: center;
+}
+
+.guarantee-refund p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.guarantee-refund strong {
+  color: var(--mint);
+}
+
+/* Pricing */
+.pricing-section {
+  margin-bottom: 48px;
+}
+
+.pricing-card {
+  background: var(--navy);
+  border: 2px solid rgba(126, 209, 178, 0.3);
+  border-radius: 24px;
+  padding: 40px 32px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 32px rgba(14, 27, 77, 0.2);
+}
+
+.pricing-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--mint);
+  margin-bottom: 8px;
+}
+
+.pricing-original {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.4);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.pricing-final {
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.pricing-final span {
+  background: linear-gradient(135deg, var(--mint), #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pricing-discount {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 12px;
+  background: rgba(126, 209, 178, 0.15);
+  color: var(--mint);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.pricing-details {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.pricing-detail {
+  text-align: center;
+}
+
+.pricing-detail-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pricing-detail-value {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.pricing-badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pricing-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Results */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.result-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.result-card h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.result-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.result-card li {
+  font-size: 12px;
+  color: var(--slate);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.result-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mint);
+}
+
+/* ========== TAB 3: EJEMPLO ========== */
+.demo-container {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid var(--border);
+  box-shadow: 0 4px 32px rgba(14, 27, 77, 0.1);
+  background: #fff;
+}
+
+.demo-browser-bar {
+  background: #F0EFEB;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.demo-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.demo-dot--red { background: #FF605C; }
+.demo-dot--yellow { background: #FFBD44; }
+.demo-dot--green { background: #00CA4E; }
+
+.demo-url {
+  flex: 1;
+  margin-left: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 5px 14px;
+  font-size: 12px;
+  color: var(--slate);
+  font-family: 'Inter', monospace;
+}
+
+.demo-iframe-wrap {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 500px;
+}
+
+.demo-iframe-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.demo-explainer {
+  background: linear-gradient(135deg, rgba(126, 209, 178, 0.08) 0%, rgba(14, 27, 77, 0.04) 100%);
+  border: 1px solid rgba(126, 209, 178, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.demo-explainer-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(126, 209, 178, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.demo-explainer h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.demo-explainer p {
+  font-size: 13px;
+  color: var(--slate);
+  line-height: 1.5;
+}
+
+/* ========== VALUE PROPS BAR ========== */
+.value-bar {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 32px 0;
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+}
+
+.value-prop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+
+.value-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.value-dot--mint { background: var(--mint); }
+.value-dot--navy { background: var(--navy); }
+.value-dot--orange { background: var(--orange); }
+.value-dot--yellow { background: var(--yellow); }
+
+/* ========== DIAGRAM (3-col raul-visual) ========== */
+.diagram {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 620px;
+  margin-bottom: 56px;
+}
+
+.dg-panel {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 28px 22px;
+  box-shadow: var(--card-shadow);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dg-center {
+  background: var(--navy);
+  border: 2px solid var(--mint);
+  border-radius: 28px;
+  padding: 36px 28px;
+  color: #fff;
+  min-width: 270px;
+  z-index: 10;
+  margin-left: -18px;
+  margin-right: -18px;
+  box-shadow: 0 4px 32px rgba(14, 27, 77, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.dg-zone-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.dg-zone-label--navy {
+  background: rgba(14, 27, 77, 0.06);
+  color: var(--midnight);
+}
+
+.dg-zone-label--green {
+  background: rgba(37, 211, 102, 0.08);
+  color: #1a8a4a;
+}
+
+/* Brain icon with pulse rings */
+.brain-wrap {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0;
+}
+
+.brain-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--mint), #4FC3A1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  z-index: 2;
+  position: relative;
+}
+
+.pulse-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid var(--mint);
+  z-index: 1;
+}
+
+.pulse-ring:nth-child(2) { inset: -8px; animation: pulse 2.5s ease-in-out infinite; }
+.pulse-ring:nth-child(3) { inset: -18px; animation: pulse 2.5s ease-in-out infinite 0.5s; }
+.pulse-ring:nth-child(4) { inset: -30px; animation: pulse 2.5s ease-in-out infinite 1s; }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.35; }
+  50% { transform: scale(1.06); opacity: 0.08; }
+}
+
+.dg-center h2 {
+  font-size: 20px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--mint), #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.dg-center .dg-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  font-weight: 500;
+}
+
+/* Capability pills inside center */
+.cap-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.cap-pill {
+  padding: 5px 12px;
+  border-radius: 14px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.8);
+}
+
+/* Flow arrows in center panel */
+.flow-arrow {
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.flow-arrow .arrow-icon { font-size: 14px; }
+.flow-arrow .arrow-icon--mint { color: var(--mint); }
+.flow-arrow .arrow-icon--yellow { color: var(--yellow); }
+
+/* Feature mini-cards inside panels */
+.feat-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  transition: all 0.3s ease;
+}
+
+.feat-card:hover {
+  background: #EEEDEA;
+  border-color: var(--midnight);
+  transform: translateY(-1px);
+}
+
+.feat-card h4 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.feat-card h4 .fc-icon { font-size: 15px; }
+
+.feat-card p {
+  font-size: 11px;
+  color: var(--slate);
+  line-height: 1.4;
+}
+
+/* Status chips */
+.status-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.status-chip {
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  background: rgba(126, 209, 178, 0.1);
+  color: #0B6E4F;
+  border: 1px solid rgba(126, 209, 178, 0.2);
+}
+
+/* Mini chat in right panel */
+.mini-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  background: #ECE5DD;
+  border-radius: 12px;
+}
+
+.mini-msg {
+  max-width: 88%;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.mini-msg--in {
+  background: #fff;
+  align-self: flex-start;
+  border-top-left-radius: 0;
+  color: var(--charcoal);
+}
+
+.mini-msg--out {
+  background: #DCF8C6;
+  align-self: flex-end;
+  border-top-right-radius: 0;
+  color: #1a3a1a;
+}
+
+/* ========== VOICE WIDGET (Tab 3) ========== */
+.voice-widget {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 50;
+}
+
+.voice-bubble {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(14, 27, 77, 0.35);
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+}
+
+.voice-bubble:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(14, 27, 77, 0.45);
+}
+
+.voice-bubble svg {
+  width: 26px;
+  height: 26px;
+  fill: #fff;
+}
+
+.voice-bubble-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid var(--navy);
+  animation: voicePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes voicePulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.15); opacity: 0; }
+}
+
+.voice-window {
+  position: absolute;
+  bottom: 72px;
+  left: 0;
+  width: 320px;
+  max-width: calc(100vw - 48px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+  transform: scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: bottom left;
+  background: #fff;
+}
+
+.voice-window.open {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.voice-header {
+  background: var(--navy);
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.voice-header h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.voice-header p {
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+}
+
+.voice-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--mint), #4FC3A1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin: 0 auto 10px;
+  position: relative;
+}
+
+.voice-avatar .ring-anim {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid var(--mint);
+  animation: voiceRing 1.5s ease-in-out infinite;
+}
+
+@keyframes voiceRing {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0; }
+}
+
+/* Waveform bars */
+.waveform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 32px;
+  margin: 12px 0;
+}
+
+.waveform .bar {
+  width: 3px;
+  border-radius: 2px;
+  background: var(--mint);
+}
+
+.waveform .bar:nth-child(1) { animation: wave 1.2s ease-in-out infinite; height: 8px; }
+.waveform .bar:nth-child(2) { animation: wave 1.2s ease-in-out infinite 0.1s; height: 16px; }
+.waveform .bar:nth-child(3) { animation: wave 1.2s ease-in-out infinite 0.2s; height: 24px; }
+.waveform .bar:nth-child(4) { animation: wave 1.2s ease-in-out infinite 0.3s; height: 32px; }
+.waveform .bar:nth-child(5) { animation: wave 1.2s ease-in-out infinite 0.4s; height: 20px; }
+.waveform .bar:nth-child(6) { animation: wave 1.2s ease-in-out infinite 0.5s; height: 28px; }
+.waveform .bar:nth-child(7) { animation: wave 1.2s ease-in-out infinite 0.6s; height: 12px; }
+.waveform .bar:nth-child(8) { animation: wave 1.2s ease-in-out infinite 0.7s; height: 22px; }
+.waveform .bar:nth-child(9) { animation: wave 1.2s ease-in-out infinite 0.15s; height: 16px; }
+.waveform .bar:nth-child(10) { animation: wave 1.2s ease-in-out infinite 0.35s; height: 10px; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.4); opacity: 0.5; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+.voice-transcript {
+  padding: 16px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.voice-line {
+  font-size: 12px;
+  line-height: 1.45;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.voice-line--ai {
+  background: rgba(126, 209, 178, 0.1);
+  border: 1px solid rgba(126, 209, 178, 0.2);
+  color: #0B6E4F;
+}
+
+.voice-line--caller {
+  background: rgba(14, 27, 77, 0.04);
+  border: 1px solid rgba(14, 27, 77, 0.08);
+  color: var(--charcoal);
+}
+
+.voice-line-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.voice-line--ai .voice-line-label { color: var(--mint); }
+.voice-line--caller .voice-line-label { color: var(--slate); }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.voice-status {
+  text-align: center;
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--mint);
+  border-top: 1px solid var(--border);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .tab-nav {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+
+  .tab-btn {
+    padding: 7px 14px;
+    font-size: 12px;
+  }
+
+  .main {
+    padding: 24px 16px 60px;
+  }
+
+  .problems-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-details {
+    gap: 20px;
+  }
+
+  .brand-divider, .brand-subtitle {
+    display: none;
+  }
+
+  .demo-iframe-wrap {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .diagram {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .dg-center {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .voice-window {
+    width: 280px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-logo">DVD CONSOLAS</div>
+      <div class="brand-divider"></div>
+      <div class="brand-subtitle">Propuesta visual de proyecto</div>
+    </div>
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="diagnostico">1. Diagnostico</button>
+      <button class="tab-btn" data-tab="solucion">2. Solucion</button>
+      <button class="tab-btn" data-tab="ejemplo">3. Tu web con IA</button>
+    </nav>
+  </div>
+</header>
+
+<!-- ==================== MAIN ==================== -->
+<main class="main">
+
+  <!-- ======= TAB 1: DIAGNOSTICO ======= -->
+  <section class="tab-content active" id="diagnostico">
+
+    <div class="section-header">
+      <span class="section-label section-label--navy">Diagnostico</span>
+      <h1 class="section-title section-title--gradient">Lo que hemos descubierto en DVD Consolas</h1>
+      <p class="section-subtitle">Un analisis profundo de como funciona hoy tu negocio y donde estan las oportunidades mas grandes.</p>
+    </div>
+
+    <!-- Pain Quote -->
+    <div class="pain-quote">
+      <blockquote>"Demasiadas cosas dependen de que alguien se acuerde de hacerlas. Y cuando alguien no se acuerda, el cliente sufre, el equipo se satura y las cosas se quedan sin hacer."</blockquote>
+      <cite>Dolor nuclear detectado en DVD Consolas</cite>
+    </div>
+
+    <!-- Metrics -->
+    <div class="metrics-bar">
+      <div class="metric-card">
+        <div class="metric-number metric-number--red">544h</div>
+        <div class="metric-label">Friccion operativa al ano</div>
+        <div class="metric-source">144h WhatsApp + 120h llamadas + 280h busquedas y facturacion</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number metric-number--orange">264h</div>
+        <div class="metric-label">En comunicacion manual</div>
+        <div class="metric-source">144h redactando WhatsApps + 120h atendiendo llamadas repetitivas</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number metric-number--navy">400</div>
+        <div class="metric-label">Reparaciones al mes</div>
+        <div class="metric-source">~100 reparaciones/semana segun datos del taller</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number metric-number--orange">288</div>
+        <div class="metric-label">Servicios/ano desaprovechados</div>
+        <div class="metric-source">Mantenimientos anuales que no se recuerdan (400 rep/mes x 6% conversion)</div>
+      </div>
+    </div>
+
+    <!-- Problems Grid -->
+    <div class="problems-grid">
+
+      <div class="problem-card">
+        <div class="problem-icon problem-icon--red">&#9888;</div>
+        <div class="problem-content">
+          <span class="problem-weight problem-weight--critical">Critico</span>
+          <h3>Toda comunicacion depende de memoria humana</h3>
+          <p>No hay trigger automatico. Cada aviso requiere que un tecnico se acuerde, deje lo que esta haciendo, busque el telefono, abra WhatsApp y escriba. 144 horas al ano en esto.</p>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-icon problem-icon--red">&#128683;</div>
+        <div class="problem-content">
+          <span class="problem-weight problem-weight--critical">Critico</span>
+          <h3>El cliente puede quedarse a ciegas</h3>
+          <p>No hay forma de saber el estado de la reparacion sin llamar o escribir, y eso obliga a un tecnico a dejar lo que esta reparando para responder. Cuando nadie responde, los equipos se acumulan meses sin aviso.</p>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-icon problem-icon--orange">&#129302;</div>
+        <div class="problem-content">
+          <span class="problem-weight problem-weight--high">Alto</span>
+          <h3>Miedo a deshumanizar la relacion</h3>
+          <p>Si la solucion suena robotica o fria, el negocio la rechaza. No es una objecion racional, es emocional y estetica. Bloquea la decision de compra.</p>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-icon problem-icon--orange">&#128241;</div>
+        <div class="problem-content">
+          <span class="problem-weight problem-weight--high">Alto</span>
+          <h3>3 WhatsApps sin historico central</h3>
+          <p>Informacion fragmentada, inconsistente y sin trazabilidad. El cliente recibe mensajes diferentes segun quien le atienda. Un parche que genero otro problema.</p>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-icon problem-icon--yellow">&#128222;</div>
+        <div class="problem-content">
+          <span class="problem-weight problem-weight--medium">Medio</span>
+          <h3>Interrupciones repetitivas de bajo valor</h3>
+          <p>Llamadas con preguntas basicas (horario, ubicacion, servicios) que drenan 120 horas al ano y rompen la concentracion del equipo.</p>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-icon problem-icon--yellow">&#128176;</div>
+        <div class="problem-content">
+          <span class="problem-weight problem-weight--medium">Medio</span>
+          <h3>Sin infraestructura de activacion comercial</h3>
+          <p>No hay forma sistematica de comunicarse con clientes existentes para recordatorios, campanas o reactivacion. El canal hoy es reactivo, no proactivo.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Insight Block -->
+    <div class="insight-block">
+      <h3>La conclusion</h3>
+      <p>El cuello de botella <strong>no es la falta de tecnicos</strong>.<br>Es la falta de un sistema que haga lo que hoy depende de acordarse.<br><br>Mientras la comunicacion siga dependiendo de memoria humana, el crecimiento no es una oportunidad &mdash; <strong>es un riesgo</strong>.</p>
+    </div>
+
+  </section>
+
+  <!-- ======= TAB 2: SOLUCION ======= -->
+  <section class="tab-content" id="solucion">
+
+    <div class="section-header">
+      <span class="section-label section-label--mint">Solucion</span>
+      <h1 class="section-title section-title--gradient">Tu nuevo empleado de atencion al cliente</h1>
+      <p class="section-subtitle">Entrenado para tu negocio, con tu tono, con memoria de cada cliente.</p>
+    </div>
+
+    <!-- ===== 3-COLUMN DIAGRAM ===== -->
+    <div class="diagram">
+
+      <!-- LEFT: TU TALLER -->
+      <div class="dg-panel">
+        <span class="dg-zone-label dg-zone-label--navy">Tu taller</span>
+
+        <div class="feat-card">
+          <h4><span class="fc-icon">&#9881;</span> ERP Divergest</h4>
+          <p>Cada cambio de estado dispara un aviso automatico al cliente:</p>
+          <div class="status-chips">
+            <span class="status-chip">Recibido</span>
+            <span class="status-chip">Diagnostico</span>
+            <span class="status-chip">Repuesto</span>
+            <span class="status-chip">Reparacion</span>
+            <span class="status-chip">Terminado</span>
+            <span class="status-chip">Recogida</span>
+          </div>
+        </div>
+
+        <div class="feat-card">
+          <h4><span class="fc-icon">&#128276;</span> Alertas internas</h4>
+          <p>Si una reparacion lleva demasiado tiempo parada, el equipo recibe aviso. Nada se queda olvidado.</p>
+        </div>
+
+        <div class="feat-card">
+          <h4><span class="fc-icon">&#128202;</span> Trazabilidad completa</h4>
+          <p>Historico de cada conversacion, cada reparacion, cada decision. Todo visible y auditable.</p>
+        </div>
+
+        <div class="feat-card">
+          <h4><span class="fc-icon">&#128640;</span> Campanas comerciales</h4>
+          <p>Mantenimiento anual, reactivacion de dormidos, upsells post-reparacion. Configuradas y listas.</p>
+          <span class="gift-tag">Incluido como regalo</span>
+        </div>
+      </div>
+
+      <!-- CENTER: EMPLEADO DIGITAL IA -->
+      <div class="dg-center">
+        <div class="brain-wrap">
+          <div class="brain-icon">&#129504;</div>
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring"></div>
+        </div>
+
+        <h2>Recepcionista Digital IA</h2>
+        <p class="dg-sub">Por WhatsApp y por voz &mdash; entrenada para DVD Consolas</p>
+
+        <div class="cap-pills">
+          <span class="cap-pill">Responde WhatsApp</span>
+          <span class="cap-pill">Atiende llamadas</span>
+          <span class="cap-pill">Recuerda clientes</span>
+          <span class="cap-pill">Tono humano</span>
+          <span class="cap-pill">Consulta datos</span>
+          <span class="cap-pill">Conoce tu catalogo</span>
+        </div>
+
+        <div class="flow-arrow">
+          <span class="arrow-icon arrow-icon--mint">&#8592;</span>
+          Estado cambia en ERP &rarr; IA lo detecta
+        </div>
+        <div class="flow-arrow">
+          <span class="arrow-icon arrow-icon--yellow">&#8594;</span>
+          IA avisa por WhatsApp &rarr; Cliente informado
+        </div>
+        <div class="flow-arrow">
+          <span class="arrow-icon arrow-icon--mint">&#8592;</span>
+          Cliente escribe o llama &rarr; IA consulta datos
+        </div>
+        <div class="flow-arrow">
+          <span class="arrow-icon arrow-icon--yellow">&#8594;</span>
+          IA responde por chat o voz al momento
+        </div>
+      </div>
+
+      <!-- RIGHT: TU CLIENTE -->
+      <div class="dg-panel">
+        <span class="dg-zone-label dg-zone-label--green">Tu cliente &middot; WhatsApp + Voz</span>
+
+        <div class="feat-card">
+          <h4><span class="fc-icon">&#128172;</span> WhatsApp unificado</h4>
+          <p>Un solo numero. Historico completo. Trazabilidad. Se acabaron los 3 WhatsApps descoordinados.</p>
+        </div>
+
+        <div class="feat-card">
+          <h4><span class="fc-icon">&#128222;</span> Atencion por voz</h4>
+          <p>El cliente llama y la recepcionista IA responde por voz: estado de reparacion, horarios, servicios, precios. Mismo conocimiento que por WhatsApp.</p>
+        </div>
+
+        <div class="mini-chat">
+          <div class="mini-msg mini-msg--in">Hola, como va mi PS5?</div>
+          <div class="mini-msg mini-msg--out">Hola David! Tu PS5 esta en reparacion. Cambiamos el HDMI esta manana. Manana a mediodia lista!</div>
+          <div class="mini-msg mini-msg--in">Genial, avisame!</div>
+          <div class="mini-msg mini-msg--out">Hecho, te aviso por aqui &#128075;</div>
+        </div>
+
+        <div class="feat-card">
+          <h4><span class="fc-icon">&#10067;</span> FAQ automatico</h4>
+          <p>Horario, ubicacion, servicios, precios. Por chat o por llamada, resuelto al momento.</p>
+        </div>
+
+        <div class="feat-card">
+          <h4><span class="fc-icon">&#128197;</span> Recordatorios</h4>
+          <p>Mantenimiento anual automatico. El cliente recibe aviso sin que nadie se acuerde.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Guarantee (compact) -->
+    <div class="guarantee-section">
+      <div class="guarantee-card">
+        <div class="guarantee-header">
+          <div class="guarantee-icon">&#128737;</div>
+          <div>
+            <div class="guarantee-title">Lo ves funcionar antes de que toque a un solo cliente</div>
+            <div class="guarantee-subtitle">Garantia total de devolucion</div>
+          </div>
+        </div>
+        <div class="criteria-grid">
+          <div class="criteria-item">
+            <div class="criteria-check">&#10003;</div>
+            <span class="criteria-text">Precision: 10 escenarios reales</span>
+          </div>
+          <div class="criteria-item">
+            <div class="criteria-check">&#10003;</div>
+            <span class="criteria-text">Tono: aprobacion explicita</span>
+          </div>
+          <div class="criteria-item">
+            <div class="criteria-check">&#10003;</div>
+            <span class="criteria-text">Conocimiento: procesos y catalogo</span>
+          </div>
+          <div class="criteria-item">
+            <div class="criteria-check">&#10003;</div>
+            <span class="criteria-text">Memoria: historico por cliente</span>
+          </div>
+        </div>
+        <div class="guarantee-refund">
+          <p>Si no supera la validacion: <strong>devolucion completa del 100%</strong>. Sin penalizaciones. Sin letra pequena.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing -->
+    <div class="pricing-section">
+      <div class="pricing-card">
+        <div class="pricing-label">Inversion del proyecto</div>
+        <div class="pricing-original">5.999 EUR</div>
+        <div class="pricing-final"><span>4.599 EUR</span></div>
+        <div class="pricing-discount">-1.400 EUR descuento especial DVD Consolas</div>
+        <div class="pricing-details">
+          <div class="pricing-detail">
+            <div class="pricing-detail-label">A la firma</div>
+            <div class="pricing-detail-value">2.000 EUR</div>
+          </div>
+          <div class="pricing-detail">
+            <div class="pricing-detail-label">A la entrega validada</div>
+            <div class="pricing-detail-value">2.599 EUR</div>
+          </div>
+          <div class="pricing-detail">
+            <div class="pricing-detail-label">Duracion</div>
+            <div class="pricing-detail-value">8 semanas</div>
+          </div>
+        </div>
+        <div class="pricing-badges">
+          <span class="pricing-badge">8 semanas</span>
+          <span class="pricing-badge">12 meses de soporte</span>
+          <span class="pricing-badge">Garantia total</span>
+          <span class="pricing-badge">8h/mes incluidas</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Closing insight -->
+    <div class="insight-block">
+      <h3>En un parrafo</h3>
+      <p>No estas comprando software ni automatizacion. Estas contratando a un empleado que <strong>nunca se olvida de avisar a tu cliente</strong>, que nunca suena a robot, y que ademas <strong>te vende mantenimientos mientras tu reparas consolas</strong>.</p>
+    </div>
+
+  </section>
+
+  <!-- ======= TAB 3: EJEMPLO ======= -->
+  <section class="tab-content" id="ejemplo">
+
+    <div class="section-header">
+      <span class="section-label section-label--orange">Ejemplo en vivo</span>
+      <h1 class="section-title section-title--gradient">Asi se vera en tu negocio</h1>
+      <p class="section-subtitle">Tu web de DVD Consolas con la recepcionista IA integrada. Haz clic en el boton azul para ver como atiende llamadas por voz.</p>
+    </div>
+
+    <div class="demo-container">
+      <div class="demo-browser-bar">
+        <div class="demo-dot demo-dot--red"></div>
+        <div class="demo-dot demo-dot--yellow"></div>
+        <div class="demo-dot demo-dot--green"></div>
+        <div class="demo-url">dvdconsolas.com</div>
+      </div>
+      <div class="demo-iframe-wrap">
+        <iframe src="./DVD-web/dvd-web.html" title="DVD Consolas web" loading="lazy"></iframe>
+
+        <!-- Voice Widget (bottom-left) -->
+        <div class="voice-widget">
+          <div class="voice-window" id="voiceWindow">
+            <div class="voice-header">
+              <div class="voice-avatar">
+                &#128222;
+                <div class="ring-anim"></div>
+              </div>
+              <h4>DVD Consolas</h4>
+              <p>Asistente de voz con IA</p>
+              <div class="waveform" id="voiceWaveform">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+              </div>
+            </div>
+            <div class="voice-transcript" id="voiceTranscript">
+            </div>
+            <div class="voice-status" id="voiceStatus">Simulacion de llamada en curso</div>
+          </div>
+          <button class="voice-bubble" id="voiceToggle">
+            <div class="voice-bubble-pulse"></div>
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </button>
+        </div>
+
+        <!-- WhatsApp widget removed: the iframe already has DVD Consolas' own WhatsApp button -->
+      </div>
+    </div>
+
+    <!-- Explainer -->
+    <div class="demo-explainer">
+      <div class="demo-explainer-icon">&#128161;</div>
+      <div>
+        <h4>Que estas viendo</h4>
+        <p>La web real de DVD Consolas con la recepcionista IA integrada. <strong>Boton azul (abajo a la izquierda):</strong> simula una llamada telefonica donde la IA atiende por voz. <strong>Boton verde de WhatsApp (propio de la web):</strong> el mismo asistente responde por chat. Un solo cerebro, dos canales: WhatsApp y voz. Recuerda a cada cliente, conoce cada reparacion y habla con el tono de DVD Consolas.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Value Props Bar -->
+  <div class="value-bar">
+    <div class="value-prop">
+      <span class="value-dot value-dot--mint"></span>
+      8 semanas de implementacion
+    </div>
+    <div class="value-prop">
+      <span class="value-dot value-dot--navy"></span>
+      Garantia 100% de devolucion
+    </div>
+    <div class="value-prop">
+      <span class="value-dot value-dot--orange"></span>
+      12 meses de soporte incluido
+    </div>
+    <div class="value-prop">
+      <span class="value-dot value-dot--yellow"></span>
+      Llave en mano
+    </div>
+  </div>
+
+</main>
+
+<script>
+// Tab switching
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.tab;
+    tabBtns.forEach(b => b.classList.remove('active'));
+    tabContents.forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(target).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+// Voice widget
+const voiceToggle = document.getElementById('voiceToggle');
+const voiceWindow = document.getElementById('voiceWindow');
+const voiceTranscript = document.getElementById('voiceTranscript');
+const voiceStatus = document.getElementById('voiceStatus');
+
+let voiceOpen = false;
+let voiceStarted = false;
+
+const voiceScript = [
+  { type: 'ai', text: 'DVD Consolas, buenas tardes. En que puedo ayudarle?', delay: 800 },
+  { type: 'caller', text: 'Hola, llamo para saber como va la reparacion de mi Xbox Series X. La deje la semana pasada.', delay: 2200 },
+  { type: 'ai', text: 'Por supuesto. Me dice su nombre para buscarle en el sistema?', delay: 1800 },
+  { type: 'caller', text: 'Si, Carlos Medina.', delay: 1500 },
+  { type: 'ai', text: 'Perfecto, Carlos. Veo su Xbox Series X aqui. Esta en fase de reparacion — el tecnico ya cambio la fuente de alimentacion esta manana y ahora esta haciendo pruebas de encendido. Si todo va bien, manana por la tarde estara lista.', delay: 2800 },
+  { type: 'caller', text: 'Genial! Me avisais cuando este?', delay: 1600 },
+  { type: 'ai', text: 'Claro, le avisamos por WhatsApp en cuanto este lista para recoger. Alguna otra cosa, Carlos?', delay: 2000 },
+  { type: 'caller', text: 'No, eso era todo. Muchas gracias!', delay: 1400 },
+  { type: 'ai', text: 'A usted, Carlos. Que tenga buena tarde!', delay: 1200 },
+];
+
+voiceToggle.addEventListener('click', () => {
+  voiceOpen = !voiceOpen;
+  voiceWindow.classList.toggle('open', voiceOpen);
+  if (voiceOpen && !voiceStarted) {
+    voiceStarted = true;
+    runVoiceScript();
+  }
+});
+
+function addVoiceLine(item) {
+  const line = document.createElement('div');
+  line.className = `voice-line voice-line--${item.type}`;
+  const label = item.type === 'ai' ? 'DVD Consolas IA' : 'Cliente';
+  line.innerHTML = `<span class="voice-line-label">${label}</span>${item.text}`;
+  voiceTranscript.appendChild(line);
+  voiceTranscript.scrollTop = voiceTranscript.scrollHeight;
+}
+
+function runVoiceScript() {
+  let totalDelay = 500;
+  voiceStatus.textContent = 'Llamada en curso...';
+  voiceScript.forEach((item, i) => {
+    totalDelay += item.delay;
+    setTimeout(() => {
+      addVoiceLine(item);
+    }, totalDelay);
+  });
+  totalDelay += 1500;
+  setTimeout(() => {
+    voiceStatus.textContent = 'Llamada finalizada';
+    document.getElementById('voiceWaveform').style.display = 'none';
+  }, totalDelay);
+}
+</script>
+
+</body>
+</html>
