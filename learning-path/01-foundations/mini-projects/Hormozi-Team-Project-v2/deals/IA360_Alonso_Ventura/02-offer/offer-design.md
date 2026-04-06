@@ -236,19 +236,19 @@ Antes de declarar el sistema operativo, se ejecuta un **stress test** con 6 esce
 
 ## 10. COMO FUNCIONA? — Timeline del proyecto
 
-### Hito 1 — Consultoria estrategica y diseno (Semanas 1-2)
+### Hito 1 — Consultoria estrategica y diseno (Semanas 1-4)
 
-Disenamos juntos el funnel de captacion, la value ladder, las value offers por escalon, y la estrategia de upsell y cross-sell. Sesiones de consultoria donde Rafael valida cada decision de diseno. Al final de esta fase, el plano completo del sistema esta aprobado.
+Disenamos juntos el funnel de captacion, la value ladder, las value offers por escalon, y la estrategia de upsell y cross-sell. 2-3 reuniones tipo workshop con el equipo (intercambiable por trabajo asincrono, pero mejor en reunion). Al final de esta fase, el plano completo del sistema esta aprobado.
 
-### Hito 2 — Construccion de la infraestructura (Semanas 3-5)
+### Hito 2 — Construccion de la infraestructura (Semanas 5-7)
 
 Construimos el ecosistema automatizado: agente de voz, WhatsApp, agendamiento con cobro, CRM de pipeline, dashboard, alertas. Todo conectado como una sola instalacion, siguiendo el diseno aprobado en el Hito 1.
 
-### Hito 3 — Pruebas y stress test (Semana 6)
+### Hito 3 — Pruebas y stress test (Semana 8)
 
 Ejecutamos los 6 escenarios del stress test con casos simulados. Validamos que el sistema responde, cualifica, agenda, cobra, transfiere y registra correctamente. Si algo no pasa, se corrige sin coste adicional.
 
-### Hito 4 — Go-live y formacion (Semana 7)
+### Hito 4 — Go-live y formacion (Semana 9)
 
 El sistema entra en produccion con leads reales. Formamos a Ana para supervisar el dashboard y gestionar excepciones. Acompanamiento en la primera semana operativa para ajustes finos.
 
