@@ -33,9 +33,9 @@
 
 ### 4. Plan Differentiation — 7/10
 
-**Rationale**: Plan unico, asi que no hay diferenciacion de planes en el sentido clasico. Sin embargo, la division en Bloque A (diseno) y Bloque B (construccion) crea diferenciacion de valor dentro del plan. La escalera de extension (Fase 2, Fase 3) da vision de continuidad. Pierde puntos porque no hay opcion de entrada para quien quiera empezar mas pequeno — decision consciente del usuario, no fallo de diseno.
+**Rationale**: Plan unico con dos bloques bien diferenciados (Diseno Estrategico + Construccion de Infraestructura), cada uno con detalle completo y proposito claro. La extension a proyectos posteriores queda como posibilidad natural sin fases formales. Pierde puntos porque no hay opcion de entrada gradual — decision consciente, no fallo de diseno.
 
-**Checklist**: Plan 1 resuelve problema real solo Si / Upgrade path sin penalizacion Si / Diferenciacion de valor Si (entre bloques, no entre planes)
+**Checklist**: Plan resuelve problema real solo Si / Extension sin penalizacion Si / Diferenciacion de valor Si (entre bloques)
 
 **Mejora posible**: Hacer aun mas explicita la narrativa de por que es un plan unico (la infraestructura + la estrategia son inseparables para resolver los dos obstaculos de peso 5).
 
@@ -47,13 +47,13 @@
 
 **Mejora posible**: Anadir un milestone intermedio (ej: "a las 2 semanas, demo funcional del agente de voz") que comprima la percepcion de Time Delay y refuerce Likelihood antes del stress test final.
 
-### 6. Time/Effort Reduction — 7/10
+### 6. Time/Effort Reduction — 8/10 (post-revision)
 
-**Rationale**: Quick win implicito ("primeros leads atendidos por el sistema en la semana 1" de la Transformation Promise) pero no esta detallado como timeline en el documento de oferta. El esfuerzo del cliente esta acotado ("sesiones de consultoria" para Bloque A, "formacion de Ana" para Bloque B). Queda claro que es DFY (llave en mano). Falta explicitar el timeline de implementacion y los inputs requeridos del cliente.
+**Rationale**: Timeline de 4 hitos explicito anadido (consultoria semanas 1-2, construccion semanas 3-5, stress test semana 6, go-live semana 7). Esfuerzo del cliente acotado (sesiones de consultoria en Bloque A, formacion de Ana en go-live). DFY claro (llave en mano). Falta listar explicitamente los inputs requeridos del cliente (accesos, credenciales, disponibilidad).
 
-**Checklist**: Quick win antes de Dia 14 Implicito / Esfuerzo del cliente acotado Si / DFY claro Si
+**Checklist**: Quick win antes de Dia 14 Si (diseno aprobado semana 2) / Esfuerzo del cliente acotado Si / DFY claro Si
 
-**Mejora posible**: Incluir un timeline de implementacion explicito (semana 1: X, semana 2: Y, semana 4: stress test). Listar explicitamente que necesitamos del cliente (accesos, sesiones de consultoria, disponibilidad de Ana para formacion).
+**Mejora posible**: Listar explicitamente que necesitamos del cliente (accesos a Calendar, credenciales de plataformas, disponibilidad para sesiones).
 
 ---
 
@@ -66,8 +66,8 @@
 | Stack Value | 8 |
 | Plan Differentiation | 7 |
 | Guarantee Strength | 8 |
-| Time/Effort Reduction | 7 |
-| **TOTAL** | **47/60 (78%)** |
+| Time/Effort Reduction | 8 |
+| **TOTAL** | **48/60 (80%)** |
 
 ### Fortalezas
 
@@ -77,12 +77,11 @@
 
 ### Gaps criticos
 
-- **Falta timeline de implementacion explicito**: el documento no dice cuando se entregan las cosas. El quick win esta en la Transformation Promise pero no en el cuerpo de la oferta.
-- **Sin cuantificacion de valor**: no hay numeros que traduzcan el stack a impacto tangible (horas ahorradas, leads atendidos, valor de igualas potenciales). Esto depende parcialmente de datos pendientes en el gap report.
+- **Sin cuantificacion de valor**: no hay numeros que traduzcan el stack a impacto tangible (horas ahorradas, leads atendidos, valor de igualas potenciales). Depende de datos pendientes en el gap report.
 - **Plan unico sin opcion de entrada gradual**: decision consciente, pero podria limitar la conversion si el precio total genera friccion.
+- **Inputs del cliente no listados**: no se explicita que necesitamos de Rafael/Ana para ejecutar (accesos, disponibilidad, credenciales).
 
-### Top 3 mejoras por orden de leverage
+### Top 2 mejoras por orden de leverage
 
-1. **Anadir timeline de implementacion** con quick win en semana 1-2 y stress test en semana 4. Ataca directamente Time/Effort Reduction (+1-2 puntos).
-2. **Anadir milestone intermedio a la garantia** (demo funcional semana 2). Refuerza Perceived Likelihood.
-3. **Cuantificar valor del stack** cuando se obtengan datos financieros del cliente. Amplifica Dream Outcome.
+1. **Cuantificar valor del stack** cuando se obtengan datos financieros del cliente. Amplifica Dream Outcome.
+2. **Listar inputs requeridos del cliente** para reducir friccion de arranque y reforzar percepcion de Effort bajo.

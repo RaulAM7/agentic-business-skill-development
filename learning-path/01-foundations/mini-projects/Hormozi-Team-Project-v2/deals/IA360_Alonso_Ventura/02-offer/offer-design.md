@@ -6,7 +6,7 @@
 
 ---
 
-## 🚀 OFFER — Maquina de Captacion y Conversion™
+## 🚀 OFFER — Sistema de Captacion y Conversion™
 
 Infraestructura automatizada + diseno estrategico de funnel y value ladder, construida a medida para convertir leads en clientes de alto valor.
 
@@ -16,7 +16,7 @@ Infraestructura automatizada + diseno estrategico de funnel y value ladder, cons
 
 **Version aspiracional (vision):**
 
-"Este proyecto construye la infraestructura que convierte tu despacho en una maquina de captacion automatica — donde cada lead se atiende en minutos, se cualifica solo, y entra en un camino disenado para llevarlo hacia tus servicios mas rentables. Nos encantaria que esta sea la base sobre la que escales sin necesitar mas horas ni mas equipo."
+"Este proyecto construye la infraestructura que convierte tu despacho en un sistema de captacion automatico — donde cada lead se atiende en minutos, se cualifica solo, y entra en un camino disenado para llevarlo hacia tus servicios mas rentables. Nos encantaria que esta sea la base sobre la que escales sin necesitar mas horas ni mas equipo."
 
 ---
 
@@ -24,7 +24,7 @@ Infraestructura automatizada + diseno estrategico de funnel y value ladder, cons
 
 | Campo | Definicion |
 |-------|------------|
-| **Nombre del sistema** | Maquina de Captacion y Conversion™ |
+| **Nombre del sistema** | Sistema de Captacion y Conversion™ |
 | **Subtitulo** | Infraestructura automatizada de conversion de leads + diseno estrategico de funnel y value ladder |
 | **Primer departamento** | Pipeline de captacion y conversion de nuevos clientes |
 | **Tipo de proyecto** | Proyecto llave en mano: diseno estrategico + construccion de infraestructura |
@@ -145,17 +145,35 @@ Los ojos del sistema. Permite saber que funciona sin estar encima.
 
 ## 6. ARQUITECTURA DE LA OFFER
 
-### Plan unico: Maquina de Captacion y Conversion™
+### Plan unico: Sistema de Captacion y Conversion™
 
 **Proyecto llave en mano con dos bloques de trabajo:**
 
 **BLOQUE A — Diseno Estrategico**
 
-Diseno de funnel diferenciado por nicho, value ladder completa, value offers por escalon, estrategia de upsell y cross-sell, cualificacion y segmentacion de leads. Co-disenado con el cliente en sesiones de consultoria.
+El cerebro del sistema. Define que se captura, como se cualifica, hacia donde se dirige y como se asciende.
+
+- Diseno de funnel de captacion diferenciado por nicho rentable (conflictos societarios, igualas, reclamaciones de cantidad)
+- Diseno de value ladder completa: consulta 100 EUR -> servicio puntual -> iguala recurrente
+- Posicionamiento de la consulta de 100 EUR como tripwire estrategico
+- Diseno de value offers por escalon (que se ofrece, a que precio, con que promesa)
+- Estrategia de upsell sistematico a clientes post-servicio exitoso
+- Estrategia de cross-sell entre servicios (ej: cliente de contrato -> propuesta de asesoria digital)
+- Cualificacion y segmentacion de leads por tipo de servicio y potencial de valor
 
 **BLOQUE B — Construccion de Infraestructura**
 
-Agente de voz IA, automatizacion WhatsApp, agendamiento centralizado con cobro, transferencia a humano, CRM de pipeline, seguimiento y recordatorios automaticos, dashboard, alertas, formacion de Ana.
+El cuerpo del sistema. Ejecuta la estrategia sin intervencion humana.
+
+- Agente de voz IA (llamadas entrantes: cualificacion + tarifa + agendamiento)
+- Automatizacion WhatsApp (respuesta instantanea + seguimiento automatico)
+- Agendamiento centralizado con reglas de negocio + cobro integrado de 100 EUR
+- Transferencia a humano en tiempo real para casos complejos/urgentes
+- CRM de pipeline (registro automatico, estados, historial, canales)
+- Recordatorios automaticos de cita (confirmacion + pre-cita)
+- Dashboard de pipeline + reportes de rendimiento del funnel
+- Alertas y escalado: notificaciones cuando se requiere intervencion humana
+- Formacion de Ana para supervision del sistema
 
 **Que HABILITA**:
 - Respuesta en minutos a cualquier lead, cualquier canal, cualquier hora
@@ -185,16 +203,11 @@ Agente de voz IA, automatizacion WhatsApp, agendamiento centralizado con cobro, 
 
 ## 8. ESCALERA Y UPGRADE
 
-Este proyecto es la **primera instalacion**. Se entrega operativo y completo.
+Este proyecto se entrega operativo y completo.
 
-La extension natural — cuando Rafael lo decida — es:
+Una vez construida la infraestructura, la extension natural es ampliarla a gestion de clientes existentes (seguimiento de expedientes, comunicacion proactiva, reactivacion de inactivos) y backoffice automatizado (gestion documental, alertas de vencimientos). La base ya esta puesta — extender es anadir modulos sobre cimientos que existen, no empezar de cero.
 
-- **Fase 2**: Automatizacion de gestion de clientes existentes (seguimiento de expedientes, comunicacion proactiva, reactivacion de clientes inactivos)
-- **Fase 3**: Backoffice con equipo de IA (gestion documental, alertas de vencimientos, automatizacion administrativa)
-
-La infraestructura construida en este proyecto es la base. Extender es anadir modulos sobre cimientos que ya existen — no empezar de cero.
-
-**Sin presion. Sin castigos.** Cada fase se decide cuando tenga sentido para el negocio.
+Es un proyecto posterior, cuando Rafael lo decida. Sin presion, sin compromiso.
 
 ---
 
@@ -221,7 +234,27 @@ Antes de declarar el sistema operativo, se ejecuta un **stress test** con 6 esce
 
 ---
 
-## 10. VISION A LARGO PLAZO (Narrativa estrategica)
+## 10. COMO FUNCIONA? — Timeline del proyecto
+
+### Hito 1 — Consultoria estrategica y diseno (Semanas 1-2)
+
+Disenamos juntos el funnel de captacion, la value ladder, las value offers por escalon, y la estrategia de upsell y cross-sell. Sesiones de consultoria donde Rafael valida cada decision de diseno. Al final de esta fase, el plano completo del sistema esta aprobado.
+
+### Hito 2 — Construccion de la infraestructura (Semanas 3-5)
+
+Construimos el ecosistema automatizado: agente de voz, WhatsApp, agendamiento con cobro, CRM de pipeline, dashboard, alertas. Todo conectado como una sola instalacion, siguiendo el diseno aprobado en el Hito 1.
+
+### Hito 3 — Pruebas y stress test (Semana 6)
+
+Ejecutamos los 6 escenarios del stress test con casos simulados. Validamos que el sistema responde, cualifica, agenda, cobra, transfiere y registra correctamente. Si algo no pasa, se corrige sin coste adicional.
+
+### Hito 4 — Go-live y formacion (Semana 7)
+
+El sistema entra en produccion con leads reales. Formamos a Ana para supervisar el dashboard y gestionar excepciones. Acompanamiento en la primera semana operativa para ajustes finos.
+
+---
+
+## 11. VISION A LARGO PLAZO (Narrativa estrategica)
 
 "Este proyecto sienta las bases de algo mas grande que una automatizacion. Es la primera pieza de un despacho que funciona como sistema, no como persona."
 
@@ -233,9 +266,9 @@ Antes de declarar el sistema operativo, se ejecuta un **stress test** con 6 esce
 
 ---
 
-## 11. FRASE DE CIERRE (Hormozi puro)
+## 12. FRASE DE CIERRE (Hormozi puro)
 
-"No estas comprando automatizacion. Estas construyendo la maquina que hace que el proximo cliente de alto valor que te busque, te encuentre primero, entre por el camino correcto, y llegue a tu mesa listo para contratar — mientras tu dedicas la tarde a lo que de verdad importa."
+"No estas comprando automatizacion. Estas construyendo el sistema que hace que el proximo cliente de alto valor que te busque, te encuentre primero, entre por el camino correcto, y llegue a tu mesa listo para contratar — mientras tu dedicas la tarde a lo que de verdad importa."
 
 ---
 
@@ -246,9 +279,10 @@ Antes de declarar el sistema operativo, se ejecuta un **stress test** con 6 esce
 - [x] DREAM OUTCOME especifico a Dia 90
 - [x] OBSTACULOS mapeados desde Context Document y Customer Map
 - [x] STACK con logica de capas (Diseno Estrategico / Infraestructura / Control)
-- [x] Plan unico con dos bloques diferenciados (Diseno + Construccion)
-- [x] ESCALERA con vision de extension sin presion
+- [x] Plan unico con dos bloques detallados (Diseno + Construccion)
+- [x] ESCALERA con extension natural sin presion
 - [x] GARANTIA con criterios objetivos pass/fail y reembolso
+- [x] TIMELINE con 4 hitos claros (consultoria -> construccion -> pruebas -> go-live)
 - [x] VISION pinta narrativa a largo plazo
 - [x] FRASE DE CIERRE reframea la compra
 - [x] Alineado con Value Equation: Dream Outcome / (Perceived Likelihood x Time Delay x Effort & Sacrifice)
