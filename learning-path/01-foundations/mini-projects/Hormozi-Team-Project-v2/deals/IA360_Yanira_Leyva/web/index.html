@@ -1,0 +1,2924 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesta — Yanira Leyva | Asesoría AI-First</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --navy: #0E1B4D;
+      --midnight: #142A6B;
+      --deep: #0A1233;
+      --coral: #F28B82;
+      --orange: #F4A261;
+      --red: #E0483F;
+      --yellow: #F2C879;
+      --mint: #7ED1B2;
+      --mint-light: #A8E4CC;
+      --mint-dark: #5BB894;
+      --ivory: #F6F1E9;
+      --slate: #566A8F;
+      --charcoal: #2E3A55;
+      --bg: #FAFAF8;
+      --bg-warm: #F5F3EF;
+      --border: #E8E6E2;
+      --shadow-xs: 0 1px 3px rgba(14, 27, 77, .04);
+      --shadow-sm: 0 2px 8px rgba(14, 27, 77, .05), 0 1px 2px rgba(14, 27, 77, .03);
+      --shadow-md: 0 4px 16px rgba(14, 27, 77, .06), 0 2px 4px rgba(14, 27, 77, .03);
+      --shadow-lg: 0 8px 32px rgba(14, 27, 77, .08), 0 4px 8px rgba(14, 27, 77, .04);
+      --shadow-xl: 0 16px 48px rgba(14, 27, 77, .1), 0 8px 16px rgba(14, 27, 77, .05);
+      --radius-sm: 12px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--charcoal);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale
+    }
+
+    /* ═══ HEADER ═══ */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 248, .92);
+      backdrop-filter: blur(20px) saturate(1.2);
+      -webkit-backdrop-filter: blur(20px) saturate(1.2);
+      border-bottom: 1px solid rgba(232, 230, 226, .6);
+      padding: 0 40px
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      height: 64px
+    }
+
+    .brand {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 3.5px;
+      color: var(--navy);
+      white-space: nowrap
+    }
+
+    .brand-divider {
+      width: 1px;
+      height: 20px;
+      background: var(--border);
+      opacity: .6
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      color: var(--slate);
+      font-weight: 600;
+      letter-spacing: .5px;
+      white-space: nowrap;
+      opacity: .7
+    }
+
+    .tab-nav {
+      display: flex;
+      gap: 2px;
+      margin-left: auto;
+      background: rgba(14, 27, 77, .04);
+      padding: 4px;
+      border-radius: 12px
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 10px 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--slate);
+      cursor: pointer;
+      border-radius: 9px;
+      transition: all .3s cubic-bezier(.4, 0, .2, 1);
+      font-family: inherit;
+      position: relative
+    }
+
+    .tab-btn:hover {
+      color: var(--navy)
+    }
+
+    .tab-btn.active {
+      color: var(--navy);
+      background: #fff;
+      box-shadow: var(--shadow-sm)
+    }
+
+    /* ═══ LAYOUT ═══ */
+    .tab-content {
+      display: none;
+      animation: fadeIn .5s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    .tab-content.active {
+      display: block
+    }
+
+    .section {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 64px 40px 80px
+    }
+
+    /* ═══ SECTION HEADERS ═══ */
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--mint-dark);
+      background: rgba(126, 209, 178, .1);
+      padding: 8px 20px;
+      border-radius: 100px;
+      margin-bottom: 20px
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4.5vw, 48px);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -.02em
+    }
+
+    .section-title--gradient {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--midnight) 40%, var(--mint-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .section-subtitle {
+      font-size: clamp(15px, 1.8vw, 17px);
+      color: var(--slate);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-weight: 400
+    }
+
+    /* ═══ GENERIC CARD ═══ */
+    .card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(232, 230, 226, .5);
+      transition: transform .35s cubic-bezier(.4, 0, .2, 1), box-shadow .35s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg)
+    }
+
+    /* ═══════════════════════════════════
+   TAB 1 — DIAGNOSTICO
+   ═══════════════════════════════════ */
+
+    .pain-quote {
+      position: relative;
+      background: linear-gradient(135deg, rgba(224, 72, 63, .04), rgba(242, 139, 130, .06));
+      border: 1px solid rgba(224, 72, 63, .1);
+      border-radius: var(--radius-lg);
+      padding: 40px 48px 40px 52px;
+      margin-bottom: 56px;
+      overflow: hidden
+    }
+
+    .pain-quote::before {
+      content: "\201C";
+      position: absolute;
+      top: -8px;
+      left: 20px;
+      font-size: 120px;
+      font-weight: 900;
+      color: rgba(224, 72, 63, .08);
+      line-height: 1;
+      font-family: Georgia, serif
+    }
+
+    .pain-quote p {
+      font-size: clamp(16px, 2.2vw, 19px);
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.75;
+      position: relative;
+      z-index: 1
+    }
+
+    .pain-quote .attribution {
+      font-size: 13px;
+      color: var(--slate);
+      margin-top: 16px;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: .5px
+    }
+
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 56px
+    }
+
+    .metric-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s, box-shadow .3s
+    }
+
+    .metric-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      border-radius: 3px 3px 0 0
+    }
+
+    .metric-card:nth-child(1)::before {
+      background: var(--red)
+    }
+
+    .metric-card:nth-child(2)::before {
+      background: var(--orange)
+    }
+
+    .metric-card:nth-child(3)::before {
+      background: var(--yellow)
+    }
+
+    .metric-card:nth-child(4)::before {
+      background: var(--mint)
+    }
+
+    .metric-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md)
+    }
+
+    .metric-number {
+      font-size: clamp(24px, 3.5vw, 32px);
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.1;
+      letter-spacing: -.01em
+    }
+
+    .metric-label {
+      font-size: 12px;
+      color: var(--slate);
+      font-weight: 500;
+      margin-top: 8px;
+      line-height: 1.4
+    }
+
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 56px
+    }
+
+    .problem-card {
+      display: flex;
+      gap: 18px;
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-xs);
+      border: 1px solid var(--border);
+      transition: all .3s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    .problem-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: transparent;
+      transform: translateY(-2px)
+    }
+
+    .problem-icon {
+      min-width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0
+    }
+
+    .problem-icon--red {
+      background: rgba(224, 72, 63, .08);
+      border: 1px solid rgba(224, 72, 63, .12)
+    }
+
+    .problem-icon--orange {
+      background: rgba(244, 162, 97, .08);
+      border: 1px solid rgba(244, 162, 97, .12)
+    }
+
+    .problem-icon--yellow {
+      background: rgba(242, 200, 121, .1);
+      border: 1px solid rgba(242, 200, 121, .2)
+    }
+
+    .problem-content h3 {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--charcoal);
+      letter-spacing: -.01em
+    }
+
+    .problem-content p {
+      font-size: 13px;
+      color: var(--slate);
+      line-height: 1.6
+    }
+
+    .problem-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 8px
+    }
+
+    .badge--critico {
+      background: rgba(224, 72, 63, .08);
+      color: var(--red)
+    }
+
+    .badge--alto {
+      background: rgba(244, 162, 97, .08);
+      color: #C77B3F
+    }
+
+    .badge--medio {
+      background: rgba(242, 200, 121, .12);
+      color: #A68520
+    }
+
+    .insight-block {
+      background: linear-gradient(135deg, var(--navy), var(--midnight));
+      border-radius: var(--radius-lg);
+      padding: 48px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    .insight-block::before {
+      content: "";
+      position: absolute;
+      top: -60%;
+      right: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(126, 209, 178, .12), transparent 70%);
+      pointer-events: none
+    }
+
+    .insight-block p {
+      font-size: clamp(16px, 2.2vw, 19px);
+      color: rgba(255, 255, 255, .9);
+      line-height: 1.8;
+      font-weight: 400;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1
+    }
+
+    .insight-block strong {
+      color: var(--mint);
+      font-weight: 700
+    }
+
+    /* ═══════════════════════════════════
+   TAB 2 — SOLUCION (REDISENO TOTAL)
+   ═══════════════════════════════════ */
+
+    /* Hero de la solucion */
+    .sol-hero {
+      background: linear-gradient(160deg, var(--deep) 0%, var(--navy) 40%, var(--midnight) 100%);
+      border-radius: var(--radius-xl);
+      padding: 56px;
+      margin-bottom: 48px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .sol-hero::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(126, 209, 178, .1), transparent 65%);
+      pointer-events: none
+    }
+
+    .sol-hero::after {
+      content: "";
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(126, 209, 178, .06), transparent 65%);
+      pointer-events: none
+    }
+
+    .sol-hero-inner {
+      position: relative;
+      z-index: 1
+    }
+
+    .sol-hero-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--mint);
+      margin-bottom: 16px;
+      display: block
+    }
+
+    .sol-hero-title {
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -.02em;
+      max-width: 600px
+    }
+
+    .sol-hero-desc {
+      font-size: 15px;
+      color: rgba(255, 255, 255, .6);
+      line-height: 1.7;
+      max-width: 540px;
+      margin-bottom: 32px
+    }
+
+    .sol-stats {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap
+    }
+
+    .sol-stat {
+      text-align: left
+    }
+
+    .sol-stat-value {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--mint)
+    }
+
+    .sol-stat-label {
+      font-size: 11px;
+      color: rgba(255, 255, 255, .45);
+      font-weight: 600;
+      letter-spacing: .5px;
+      margin-top: 2px
+    }
+
+    /* Flujo visual: Canales → Sistema → Servicios */
+    .sol-flow {
+      display: grid;
+      grid-template-columns: 200px 1fr 200px;
+      gap: 0;
+      align-items: center;
+      margin-bottom: 56px
+    }
+
+    .sol-flow-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .sol-flow-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all .25s
+    }
+
+    .sol-flow-item:hover {
+      border-color: var(--mint);
+      box-shadow: var(--shadow-sm)
+    }
+
+    .sol-flow-item .fi {
+      font-size: 16px;
+      opacity: .7
+    }
+
+    .sol-flow-connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative
+    }
+
+    .sol-flow-center {
+      background: var(--navy);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      text-align: center;
+      border: 1px solid rgba(126, 209, 178, .2);
+      position: relative;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center
+    }
+
+    .sol-flow-center::before,
+    .sol-flow-center::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--mint), transparent)
+    }
+
+    .sol-flow-center::before {
+      left: -40px
+    }
+
+    .sol-flow-center::after {
+      right: -40px;
+      background: linear-gradient(90deg, transparent, var(--mint))
+    }
+
+    .sfc-label {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--mint);
+      margin-bottom: 16px
+    }
+
+    .sfc-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(126, 209, 178, .2), rgba(126, 209, 178, .05));
+      border: 2px solid rgba(126, 209, 178, .3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 20px;
+      position: relative
+    }
+
+    .sfc-icon::before {
+      content: "";
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1px solid rgba(126, 209, 178, .15);
+      animation: sfc-pulse 3s ease-in-out infinite
+    }
+
+    .sfc-icon::after {
+      content: "";
+      position: absolute;
+      inset: -14px;
+      border-radius: 50%;
+      border: 1px solid rgba(126, 209, 178, .08);
+      animation: sfc-pulse 3s ease-in-out infinite .5s
+    }
+
+    @keyframes sfc-pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .3;
+        transform: scale(1.05)
+      }
+    }
+
+    .sfc-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+      letter-spacing: .5px
+    }
+
+    .sfc-caps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      max-width: 280px
+    }
+
+    .sfc-cap {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--mint);
+      background: rgba(126, 209, 178, .1);
+      padding: 5px 11px;
+      border-radius: 100px;
+      border: 1px solid rgba(126, 209, 178, .15);
+      white-space: nowrap
+    }
+
+    /* Layers del sistema */
+    .sol-layers {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 48px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md)
+    }
+
+    .sol-layer {
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 32px;
+      align-items: start;
+      transition: all .3s
+    }
+
+    .sol-layer:hover {
+      background-image: linear-gradient(90deg, rgba(126, 209, 178, .03), transparent)
+    }
+
+    .sol-layer--strategy {
+      background: linear-gradient(135deg, rgba(126, 209, 178, .06), rgba(126, 209, 178, .02));
+      border-bottom: 1px solid rgba(126, 209, 178, .1)
+    }
+
+    .sol-layer--infra {
+      background: #fff;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .sol-layer--control {
+      background: var(--bg-warm)
+    }
+
+    .sol-layer-header {
+      position: sticky;
+      top: 80px
+    }
+
+    .sol-layer-num {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px
+    }
+
+    .sol-layer--strategy .sol-layer-num {
+      color: var(--mint-dark)
+    }
+
+    .sol-layer--infra .sol-layer-num {
+      color: var(--navy)
+    }
+
+    .sol-layer--control .sol-layer-num {
+      color: var(--slate)
+    }
+
+    .sol-layer-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 4px;
+      letter-spacing: -.01em
+    }
+
+    .sol-layer-sub {
+      font-size: 12px;
+      color: var(--slate);
+      font-weight: 500
+    }
+
+    .sol-layer-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 10px
+    }
+
+    .sol-layer-item {
+      font-size: 13px;
+      color: var(--charcoal);
+      line-height: 1.5;
+      padding: 10px 14px 10px 28px;
+      position: relative;
+      border-radius: var(--radius-sm);
+      transition: background .2s
+    }
+
+    .sol-layer-item:hover {
+      background: rgba(14, 27, 77, .02)
+    }
+
+    .sol-layer-item::before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 16px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%
+    }
+
+    .sol-layer--strategy .sol-layer-item::before {
+      background: var(--mint)
+    }
+
+    .sol-layer--infra .sol-layer-item::before {
+      background: var(--navy)
+    }
+
+    .sol-layer--control .sol-layer-item::before {
+      background: var(--slate)
+    }
+
+    /* Toolkit */
+    .sol-toolkit {
+      margin-bottom: 48px
+    }
+
+    .sol-toolkit-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 16px;
+      text-align: center
+    }
+
+    .sol-toolkit-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .sol-toolkit-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 10px 20px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all .25s
+    }
+
+    .sol-toolkit-item:hover {
+      border-color: var(--mint);
+      background: rgba(126, 209, 178, .04);
+      transform: translateY(-1px)
+    }
+
+    .sol-toolkit-item span {
+      font-size: 15px
+    }
+
+    /* Pricing */
+    .sol-pricing {
+      max-width: 560px;
+      margin: 0 auto 48px;
+      position: relative
+    }
+
+    .sol-pricing-popup {
+      position: absolute;
+      top: -20px;
+      right: -18px;
+      z-index: 2;
+      background: linear-gradient(135deg, #ff6b6b, #e0483f);
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(224, 72, 63, .28);
+      border: 1px solid rgba(255, 255, 255, .18);
+      max-width: 220px;
+      transform: rotate(6deg)
+    }
+
+    .sol-pricing-popup::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 28px;
+      width: 16px;
+      height: 16px;
+      background: #e0483f;
+      transform: rotate(45deg)
+    }
+
+    .sol-pricing-popup-title {
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      margin-bottom: 4px
+    }
+
+    .sol-pricing-popup-text {
+      font-size: 12px;
+      line-height: 1.35;
+      font-weight: 700
+    }
+
+    .sol-pricing-card {
+      background: linear-gradient(160deg, var(--deep), var(--navy), var(--midnight));
+      border-radius: var(--radius-xl);
+      padding: 48px 44px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(126, 209, 178, .15)
+    }
+
+    .sol-pricing-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--mint), transparent)
+    }
+
+    .sol-pricing-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--mint);
+      margin-bottom: 12px
+    }
+
+    .sol-pricing-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 18px;
+      letter-spacing: -.02em
+    }
+
+    .sol-pricing-special-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .55);
+      margin-bottom: 6px
+    }
+
+    .sol-pricing-original {
+      font-size: 18px;
+      color: rgba(255, 255, 255, .35);
+      text-decoration: line-through;
+      margin-bottom: 4px;
+      font-weight: 500
+    }
+
+    .sol-pricing-final {
+      font-size: clamp(40px, 6vw, 56px);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 8px;
+      letter-spacing: -.02em
+    }
+
+    .sol-pricing-final span {
+      color: var(--mint)
+    }
+
+    .sol-pricing-discount {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(224, 72, 63, .14);
+      color: #ff8d86;
+      padding: 6px 18px;
+      border-radius: 100px;
+      border: 1px solid rgba(224, 72, 63, .3);
+      margin-bottom: 28px
+    }
+
+    .sol-pricing-terms {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 24px
+    }
+
+    .sol-pricing-term {
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: var(--radius-md);
+      padding: 18px 28px;
+      text-align: center;
+      flex: 1;
+      max-width: 200px
+    }
+
+    .sol-pricing-term-label {
+      font-size: 10px;
+      color: rgba(255, 255, 255, .4);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px
+    }
+
+    .sol-pricing-term-value {
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      margin-top: 4px
+    }
+
+    .sol-pricing-maint {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .06);
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, .5);
+      font-weight: 600;
+      margin-top: 8px
+    }
+
+    .sol-pricing-maint strong {
+      color: var(--mint)
+    }
+
+    .sol-pricing-note {
+      font-size: 11px;
+      color: rgba(255, 255, 255, .3);
+      margin-top: 16px;
+      font-style: italic
+    }
+
+    /* Habilita / No hace */
+    .sol-scope {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 0
+    }
+
+    .sol-scope-card {
+      border-radius: var(--radius-lg);
+      padding: 32px
+    }
+
+    .sol-scope-card--yes {
+      background: rgba(126, 209, 178, .04);
+      border: 1px solid rgba(126, 209, 178, .15)
+    }
+
+    .sol-scope-card--no {
+      background: rgba(14, 27, 77, .02);
+      border: 1px solid rgba(14, 27, 77, .06)
+    }
+
+    .sol-scope-card h3 {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px
+    }
+
+    .sol-scope-card--yes h3 {
+      color: var(--mint-dark)
+    }
+
+    .sol-scope-card--no h3 {
+      color: var(--slate)
+    }
+
+    .sol-scope-card ul {
+      list-style: none
+    }
+
+    .sol-scope-card li {
+      font-size: 14px;
+      color: var(--charcoal);
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      line-height: 1.55
+    }
+
+    .sol-scope-card--yes li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: rgba(126, 209, 178, .12);
+      border: 2px solid var(--mint)
+    }
+
+    .sol-scope-card--yes li::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 10px;
+      width: 8px;
+      height: 4px;
+      border-left: 2px solid var(--mint-dark);
+      border-bottom: 2px solid var(--mint-dark);
+      transform: rotate(-45deg)
+    }
+
+    .sol-scope-card--no li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: rgba(14, 27, 77, .04);
+      border: 2px solid rgba(14, 27, 77, .12)
+    }
+
+    .sol-scope-card--no li::after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 12px;
+      width: 6px;
+      height: 2px;
+      background: var(--slate);
+      border-radius: 1px
+    }
+
+    /* ═══ VALUE LADDER ═══ */
+    .vl-block {
+      background: linear-gradient(180deg, rgba(126, 209, 178, .02), rgba(14, 27, 77, .02));
+      border-radius: var(--radius-xl);
+      padding: 56px 48px;
+      margin: 56px 0 48px
+    }
+
+    .vl-block-header {
+      text-align: center;
+      margin-bottom: 40px
+    }
+
+    .vl-block-title {
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 8px;
+      letter-spacing: -.02em
+    }
+
+    .vl-block-sub {
+      font-size: 14px;
+      color: var(--slate);
+      font-weight: 400
+    }
+
+    .vl-transform {
+      display: grid;
+      grid-template-columns: 1fr 64px 1fr;
+      gap: 0;
+      margin-bottom: 56px;
+      align-items: stretch
+    }
+
+    .vl-panel {
+      border-radius: var(--radius-lg);
+      padding: 32px
+    }
+
+    .vl-panel--before {
+      background: rgba(224, 72, 63, .03);
+      border: 1px solid rgba(224, 72, 63, .12)
+    }
+
+    .vl-panel--after {
+      background: rgba(126, 209, 178, .04);
+      border: 1px solid rgba(126, 209, 178, .15)
+    }
+
+    .vl-panel-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: block
+    }
+
+    .vl-panel--before .vl-panel-label {
+      color: var(--red)
+    }
+
+    .vl-panel--after .vl-panel-label {
+      color: var(--mint-dark)
+    }
+
+    .vl-panel-list {
+      list-style: none
+    }
+
+    .vl-panel-list li {
+      font-size: 14px;
+      color: var(--charcoal);
+      margin-bottom: 14px;
+      padding-left: 24px;
+      position: relative;
+      line-height: 1.55
+    }
+
+    .vl-panel--before li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 8px;
+      height: 2px;
+      background: var(--red);
+      border-radius: 1px
+    }
+
+    .vl-panel--after li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(126, 209, 178, .15);
+      border: 2px solid var(--mint)
+    }
+
+    .vl-panel--after li::after {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 9px;
+      width: 4px;
+      height: 2px;
+      border-left: 1.5px solid var(--mint-dark);
+      border-bottom: 1.5px solid var(--mint-dark);
+      transform: rotate(-45deg)
+    }
+
+    .vl-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .vl-arrow-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), var(--midnight));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--mint);
+      font-size: 20px;
+      font-weight: 700;
+      box-shadow: var(--shadow-md)
+    }
+
+    .vl-stairs {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 24px 0;
+      position: relative
+    }
+
+    .vl-stairs-label {
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--slate);
+      opacity: .4;
+      white-space: nowrap
+    }
+
+    .vl-stair {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 28px;
+      border-radius: var(--radius-md);
+      transition: all .35s cubic-bezier(.4, 0, .2, 1);
+      border: 1px solid transparent;
+      position: relative
+    }
+
+    .vl-stair:hover {
+      transform: translateX(8px);
+      box-shadow: var(--shadow-md)
+    }
+
+    .vl-stair--4 {
+      margin-left: 42%;
+      background: linear-gradient(135deg, var(--deep), var(--navy));
+      color: #fff;
+      border-color: rgba(126, 209, 178, .2);
+      box-shadow: var(--shadow-sm)
+    }
+
+    .vl-stair--3 {
+      margin-left: 28%;
+      background: linear-gradient(135deg, var(--navy), var(--midnight));
+      color: #fff;
+      border-color: rgba(126, 209, 178, .15);
+      box-shadow: var(--shadow-sm)
+    }
+
+    .vl-stair--2 {
+      margin-left: 14%;
+      background: #fff;
+      border-color: var(--border);
+      box-shadow: var(--shadow-sm)
+    }
+
+    .vl-stair--1 {
+      margin-left: 0;
+      background: rgba(126, 209, 178, .06);
+      border-color: rgba(126, 209, 178, .2)
+    }
+
+    .vl-stair-num {
+      min-width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: 900;
+      flex-shrink: 0
+    }
+
+    .vl-stair--4 .vl-stair-num {
+      background: rgba(126, 209, 178, .15);
+      color: var(--mint)
+    }
+
+    .vl-stair--3 .vl-stair-num {
+      background: rgba(126, 209, 178, .12);
+      color: var(--mint)
+    }
+
+    .vl-stair--2 .vl-stair-num {
+      background: rgba(14, 27, 77, .06);
+      color: var(--navy)
+    }
+
+    .vl-stair--1 .vl-stair-num {
+      background: rgba(126, 209, 178, .15);
+      color: var(--mint-dark)
+    }
+
+    .vl-stair-info {
+      flex: 1;
+      min-width: 0
+    }
+
+    .vl-stair-name {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -.01em;
+      margin-bottom: 2px
+    }
+
+    .vl-stair--4 .vl-stair-name,
+    .vl-stair--3 .vl-stair-name {
+      color: #fff
+    }
+
+    .vl-stair--2 .vl-stair-name {
+      color: var(--navy)
+    }
+
+    .vl-stair--1 .vl-stair-name {
+      color: var(--charcoal)
+    }
+
+    .vl-stair-desc {
+      font-size: 12px;
+      line-height: 1.4
+    }
+
+    .vl-stair--4 .vl-stair-desc,
+    .vl-stair--3 .vl-stair-desc {
+      color: rgba(255, 255, 255, .5)
+    }
+
+    .vl-stair--2 .vl-stair-desc,
+    .vl-stair--1 .vl-stair-desc {
+      color: var(--slate)
+    }
+
+    .vl-stair-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      white-space: nowrap;
+      flex-shrink: 0
+    }
+
+    .vl-stair--4 .vl-stair-tag {
+      background: rgba(242, 200, 121, .15);
+      color: var(--yellow)
+    }
+
+    .vl-stair--3 .vl-stair-tag {
+      background: rgba(126, 209, 178, .12);
+      color: var(--mint)
+    }
+
+    .vl-stair--2 .vl-stair-tag {
+      background: rgba(14, 27, 77, .06);
+      color: var(--navy)
+    }
+
+    .vl-stair--1 .vl-stair-tag {
+      background: rgba(126, 209, 178, .12);
+      color: var(--mint-dark)
+    }
+
+    /* ═══════════════════════════════════
+   TAB 3 — COMO FUNCIONA (PREMIUM)
+   ═══════════════════════════════════ */
+
+    .tl-container {
+      max-width: 880px;
+      margin: 0 auto 56px;
+      position: relative
+    }
+
+    .tl-track {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      transform: translateX(-50%)
+    }
+
+    .tl-track-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--border);
+      border-radius: 2px
+    }
+
+    .tl-track-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to bottom, var(--navy), var(--midnight), var(--mint));
+      border-radius: 2px;
+      transition: height 1s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    .tl-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 80px 1fr;
+      gap: 0;
+      margin-bottom: 0;
+      min-height: 200px;
+      align-items: center
+    }
+
+    .tl-step:last-child {
+      min-height: auto
+    }
+
+    .tl-step-node {
+      grid-column: 2;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 2
+    }
+
+    .tl-node-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 900;
+      color: #fff;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(14, 27, 77, .15)
+    }
+
+    .tl-step:nth-child(1) .tl-node-circle {
+      background: linear-gradient(135deg, var(--navy), var(--midnight))
+    }
+
+    .tl-step:nth-child(2) .tl-node-circle {
+      background: linear-gradient(135deg, var(--midnight), #1E3A8A)
+    }
+
+    .tl-step:nth-child(3) .tl-node-circle {
+      background: linear-gradient(135deg, #1E3A8A, var(--mint-dark))
+    }
+
+    .tl-step:nth-child(4) .tl-node-circle {
+      background: linear-gradient(135deg, var(--mint-dark), var(--mint))
+    }
+
+    .tl-node-ring {
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      border: 2px solid;
+      opacity: .25
+    }
+
+    .tl-step:nth-child(1) .tl-node-ring {
+      border-color: var(--navy)
+    }
+
+    .tl-step:nth-child(2) .tl-node-ring {
+      border-color: var(--midnight)
+    }
+
+    .tl-step:nth-child(3) .tl-node-ring {
+      border-color: var(--mint-dark)
+    }
+
+    .tl-step:nth-child(4) .tl-node-ring {
+      border-color: var(--mint)
+    }
+
+    .tl-step-content {
+      padding: 24px 0
+    }
+
+    .tl-step:nth-child(odd) .tl-step-content {
+      grid-column: 1;
+      padding-right: 32px;
+      text-align: right
+    }
+
+    .tl-step:nth-child(odd) .tl-step-empty {
+      grid-column: 3
+    }
+
+    .tl-step:nth-child(even) .tl-step-content {
+      grid-column: 3;
+      padding-left: 32px
+    }
+
+    .tl-step:nth-child(even) .tl-step-empty {
+      grid-column: 1
+    }
+
+    .tl-step-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      transition: all .35s cubic-bezier(.4, 0, .2, 1);
+      position: relative
+    }
+
+    .tl-step-card:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+      transform: translateY(-3px)
+    }
+
+    .tl-step:nth-child(odd) .tl-step-card::after {
+      content: "";
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      border-right: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+      transition: border-color .35s
+    }
+
+    .tl-step:nth-child(even) .tl-step-card::after {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      border-left: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      transition: border-color .35s
+    }
+
+    .tl-step-card:hover::after {
+      border-color: transparent
+    }
+
+    .tl-step-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 14px
+    }
+
+    .tl-step:nth-child(1) .tl-step-badge {
+      background: rgba(14, 27, 77, .06);
+      color: var(--navy)
+    }
+
+    .tl-step:nth-child(2) .tl-step-badge {
+      background: rgba(14, 27, 77, .06);
+      color: var(--midnight)
+    }
+
+    .tl-step:nth-child(3) .tl-step-badge {
+      background: rgba(244, 162, 97, .1);
+      color: #B87A3D
+    }
+
+    .tl-step:nth-child(4) .tl-step-badge {
+      background: rgba(126, 209, 178, .1);
+      color: var(--mint-dark)
+    }
+
+    .tl-step-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+      display: block
+    }
+
+    .tl-step-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 10px;
+      letter-spacing: -.01em
+    }
+
+    .tl-step-list {
+      list-style: none
+    }
+
+    .tl-step-list li {
+      font-size: 13px;
+      color: var(--slate);
+      margin-bottom: 6px;
+      line-height: 1.55;
+      padding-left: 16px;
+      position: relative
+    }
+
+    .tl-step-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--slate);
+      opacity: .4
+    }
+
+    .tl-result {
+      background: linear-gradient(135deg, rgba(126, 209, 178, .06), rgba(126, 209, 178, .02));
+      border: 1px solid rgba(126, 209, 178, .15);
+      border-radius: var(--radius-lg);
+      padding: 40px 48px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto
+    }
+
+    .tl-result p {
+      font-size: clamp(15px, 1.8vw, 16px);
+      color: var(--charcoal);
+      line-height: 1.75;
+      max-width: 580px;
+      margin: 0 auto
+    }
+
+    .tl-result strong {
+      color: var(--navy);
+      font-weight: 800
+    }
+
+    /* ═══════════════════════════════════
+   TAB 4 — GARANTIA
+   ═══════════════════════════════════ */
+
+    .gar-intro {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 56px;
+      font-size: 16px;
+      color: var(--charcoal);
+      line-height: 1.75
+    }
+
+    .gar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 56px
+    }
+
+    .gar-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: all .35s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    .gar-card:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+      transform: translateY(-3px)
+    }
+
+    .gar-card-head {
+      display: flex;
+      align-items: center;
+      gap: 14px
+    }
+
+    .gar-card-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--navy), var(--midnight));
+      color: var(--mint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 900;
+      flex-shrink: 0
+    }
+
+    .gar-card-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--charcoal);
+      letter-spacing: -.01em
+    }
+
+    .gar-card p {
+      font-size: 13px;
+      color: var(--slate);
+      line-height: 1.6
+    }
+
+    .gar-criteria {
+      text-align: center;
+      margin-bottom: 56px;
+      padding: 40px;
+      background: #fff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border)
+    }
+
+    .gar-criteria p {
+      font-size: clamp(16px, 2.2vw, 20px);
+      font-weight: 600;
+      color: var(--navy);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.6
+    }
+
+    .gar-criteria .gar-em {
+      color: var(--mint-dark);
+      font-weight: 900;
+      font-size: 1.1em
+    }
+
+    .gar-process {
+      display: flex;
+      gap: 0;
+      justify-content: center;
+      align-items: stretch;
+      margin-bottom: 56px;
+      max-width: 840px;
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .gar-process-step {
+      flex: 1;
+      text-align: center;
+      padding: 28px 24px;
+      position: relative
+    }
+
+    .gar-process-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid var(--border);
+      z-index: 1
+    }
+
+    .gar-process-step:first-child {
+      background: rgba(14, 27, 77, .03);
+      border-radius: var(--radius-lg) 0 0 var(--radius-lg)
+    }
+
+    .gar-process-step:nth-child(2) {
+      background: rgba(14, 27, 77, .05)
+    }
+
+    .gar-process-step:last-child {
+      background: linear-gradient(135deg, rgba(126, 209, 178, .08), rgba(126, 209, 178, .15));
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0
+    }
+
+    .gar-process-num {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 10px
+    }
+
+    .gar-process-step:last-child .gar-process-num {
+      color: var(--mint-dark)
+    }
+
+    .gar-process-text {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1.5
+    }
+
+    .gar-process-step:last-child .gar-process-text {
+      color: var(--mint-dark)
+    }
+
+    .gar-process-detail {
+      font-size: 11px;
+      color: var(--slate);
+      margin-top: 4px;
+      font-weight: 500
+    }
+
+    .gar-refund {
+      background: linear-gradient(160deg, var(--deep), var(--navy));
+      border-radius: var(--radius-xl);
+      padding: 56px;
+      text-align: center;
+      margin-bottom: 56px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .gar-refund::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(126, 209, 178, .5), transparent)
+    }
+
+    .gar-refund-title {
+      font-size: clamp(22px, 3.5vw, 32px);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 24px;
+      letter-spacing: -.01em;
+      position: relative;
+      z-index: 1
+    }
+
+    .gar-refund-title span {
+      color: var(--mint)
+    }
+
+    .gar-refund-terms {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1
+    }
+
+    .gar-refund-term {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, .6);
+      font-weight: 500
+    }
+
+    .gar-refund-term::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--mint);
+      opacity: .5
+    }
+
+    .gar-exclusions {
+      max-width: 600px;
+      margin: 0 auto 56px;
+      padding: 24px 32px;
+      background: rgba(14, 27, 77, .02);
+      border: 1px solid rgba(14, 27, 77, .05);
+      border-radius: var(--radius-md)
+    }
+
+    .gar-exclusions-title {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 12px
+    }
+
+    .gar-exclusions p {
+      font-size: 13px;
+      color: var(--slate);
+      line-height: 1.65;
+      margin-bottom: 6px
+    }
+
+    .gar-exclusions p:last-child {
+      margin-bottom: 0
+    }
+
+    .gar-close {
+      background: rgba(126, 209, 178, .04);
+      border: 1px solid rgba(126, 209, 178, .12);
+      border-radius: var(--radius-lg);
+      padding: 40px 48px;
+      text-align: center;
+      max-width: 660px;
+      margin: 0 auto
+    }
+
+    .gar-close p {
+      font-size: clamp(15px, 1.8vw, 16px);
+      color: var(--charcoal);
+      line-height: 1.75
+    }
+
+    .gar-close strong {
+      color: var(--navy);
+      font-weight: 800
+    }
+
+    /* ═══ FOOTER ═══ */
+    .footer {
+      background: linear-gradient(160deg, var(--deep), var(--navy));
+      color: #fff;
+      text-align: center;
+      padding: 48px 40px;
+      margin-top: 80px
+    }
+
+    .footer-name {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: .5px;
+      margin-bottom: 4px
+    }
+
+    .footer-role {
+      font-size: 12px;
+      color: rgba(255, 255, 255, .4);
+      margin-bottom: 4px;
+      font-weight: 500
+    }
+
+    .footer-org {
+      font-size: 12px;
+      color: rgba(255, 255, 255, .3);
+      margin-bottom: 20px
+    }
+
+    .footer-contact {
+      font-size: 12px;
+      color: var(--mint);
+      font-weight: 500
+    }
+
+    .footer-contact a {
+      color: var(--mint);
+      text-decoration: none;
+      transition: opacity .2s
+    }
+
+    .footer-contact a:hover {
+      opacity: .7
+    }
+
+    /* ═══ ANIMATIONS ═══ */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media(max-width:960px) {
+      .header {
+        padding: 0 24px
+      }
+
+      .header-inner {
+        height: auto;
+        padding: 12px 0;
+        flex-wrap: wrap;
+        gap: 12px
+      }
+
+      .tab-nav {
+        margin-left: 0;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0;
+        scrollbar-width: none
+      }
+
+      .tab-nav::-webkit-scrollbar {
+        display: none
+      }
+
+      .tab-btn {
+        padding: 8px 16px;
+        font-size: 10px;
+        white-space: nowrap
+      }
+
+      .section {
+        padding: 48px 24px 64px
+      }
+
+      .metrics-bar {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .problems-grid {
+        grid-template-columns: 1fr
+      }
+
+      .sol-flow {
+        grid-template-columns: 1fr;
+        gap: 16px
+      }
+
+      .sol-flow-center::before,
+      .sol-flow-center::after {
+        display: none
+      }
+
+      .sol-layers .sol-layer {
+        grid-template-columns: 1fr
+      }
+
+      .sol-scope {
+        grid-template-columns: 1fr
+      }
+
+      .tl-container {
+        max-width: 100%
+      }
+
+      .tl-track {
+        left: 28px
+      }
+
+      .tl-step {
+        grid-template-columns: 56px 1fr;
+        gap: 0
+      }
+
+      .tl-step-node {
+        grid-column: 1;
+        justify-content: center
+      }
+
+      .tl-step-content,
+      .tl-step:nth-child(odd) .tl-step-content,
+      .tl-step:nth-child(even) .tl-step-content {
+        grid-column: 2;
+        padding: 16px 0 16px 24px;
+        text-align: left
+      }
+
+      .tl-step-empty {
+        display: none
+      }
+
+      .tl-step-card::after {
+        display: none !important
+      }
+
+      .gar-grid {
+        grid-template-columns: 1fr
+      }
+
+      .gar-process {
+        flex-direction: column;
+        border-radius: var(--radius-lg);
+        overflow: hidden
+      }
+
+      .gar-process-step {
+        border-radius: 0 !important
+      }
+
+      .gar-process-step:not(:last-child)::after {
+        display: none
+      }
+
+      .sol-stats {
+        gap: 20px
+      }
+
+      .sol-pricing-terms {
+        flex-direction: column;
+        align-items: center
+      }
+
+      .sol-pricing-term {
+        max-width: none;
+        width: 100%
+      }
+
+      .sol-pricing-popup {
+        position: static;
+        transform: none;
+        max-width: none;
+        margin: 0 auto 16px;
+        text-align: center
+      }
+
+      .sol-pricing-popup::after {
+        display: none
+      }
+
+      .vl-transform {
+        grid-template-columns: 1fr;
+        gap: 16px
+      }
+
+      .vl-arrow {
+        padding: 8px 0
+      }
+
+      .vl-arrow-icon {
+        transform: rotate(90deg)
+      }
+
+      .vl-stair--4,
+      .vl-stair--3,
+      .vl-stair--2 {
+        margin-left: 0
+      }
+
+      .vl-block {
+        padding: 40px 24px
+      }
+
+      .vl-stairs-label {
+        display: none
+      }
+    }
+
+    @media(max-width:640px) {
+
+      .brand-sub,
+      .brand-divider {
+        display: none
+      }
+
+      .section {
+        padding: 40px 20px 56px
+      }
+
+      .pain-quote {
+        padding: 32px 28px 32px 32px
+      }
+
+      .pain-quote::before {
+        font-size: 80px;
+        left: 12px
+      }
+
+      .sol-hero {
+        padding: 40px 28px
+      }
+
+      .sol-pricing-card {
+        padding: 36px 28px
+      }
+
+      .gar-refund {
+        padding: 40px 28px
+      }
+
+      .gar-refund-terms {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center
+      }
+
+      .metrics-bar {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">YANIRA LEYVA</div>
+      <div class="brand-divider"></div>
+      <div class="brand-sub">Asesoría AI-First</div>
+      <nav class="tab-nav">
+        <button class="tab-btn active" data-tab="diagnostico">Diagnóstico</button>
+        <button class="tab-btn" data-tab="solucion">Solución</button>
+        <button class="tab-btn" data-tab="comofunciona">Cómo funciona</button>
+        <button class="tab-btn" data-tab="garantia">Garantía</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══════════ TAB 1: DIAGNOSTICO ═══════════ -->
+  <div class="tab-content active" id="diagnostico">
+    <div class="section">
+
+      <div class="section-header">
+        <div class="section-label">Diagnóstico</div>
+        <h1 class="section-title section-title--gradient">Qué hemos descubierto en tu despacho</h1>
+        <p class="section-subtitle">No falta organización. Falta una infraestructura fiable que quite trabajo en lugar
+          de añadirlo.</p>
+      </div>
+
+      <div class="pain-quote">
+        <p>"Si el caos entra por los documentos, termina explotando en el cierre, en el margen y en la sensación de
+          que el despacho crece en horas en vez de crecer en control."</p>
+        <div class="attribution">El gran dominó operativo que esta propuesta viene a cortar</div>
+      </div>
+
+      <div class="metrics-bar">
+        <div class="metric-card">
+          <div class="metric-number">1,5 sem/mes</div>
+          <div class="metric-label">Tiempo absorbido por trabajo manual repetitivo</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-number">27%</div>
+          <div class="metric-label">Facturas que el OCR actual no procesa bien</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-number">200-250</div>
+          <div class="metric-label">Clientes operando sobre una base frágil</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-number">2-3 días</div>
+          <div class="metric-label">Revisión trimestral manual para corregir errores sistémicos</div>
+        </div>
+      </div>
+
+      <div class="problems-grid">
+        <div class="problem-card">
+          <div class="problem-icon problem-icon--red">&#128451;</div>
+          <div class="problem-content">
+            <span class="problem-badge badge--critico">Crítico</span>
+            <h3>Caos documental de entrada</h3>
+            <p>Los clientes suben documentación sin clasificar a Drive o iCloud y Yanira termina reorganizando
+              manualmente ingresos, gastos y trimestres cliente por cliente.</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon problem-icon--red">&#9881;</div>
+          <div class="problem-content">
+            <span class="problem-badge badge--critico">Crítico</span>
+            <h3>Software contable que promete y falla</h3>
+            <p>El OCR actual rechaza documentos, duplica bienes de inversión y obliga a revisar a mano justo aquello
+              que supuestamente iba a automatizar.</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon problem-icon--orange">&#128176;</div>
+          <div class="problem-content">
+            <span class="problem-badge badge--alto">Alto</span>
+            <h3>Modelo de precios sin relación con la carga real</h3>
+            <p>Cliente de bajo volumen y cliente complejo entran casi por el mismo carril. Los extras se absorben y no
+              hay contrato claro que delimite alcance.</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon problem-icon--orange">&#9993;</div>
+          <div class="problem-content">
+            <span class="problem-badge badge--alto">Alto</span>
+            <h3>Comunicaciones recurrentes hechas a mano</h3>
+            <p>Los recordatorios mensuales y trimestrales siguen dependiendo de que alguien los programe y lance cada
+              vez, con consumo constante de atención.</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon problem-icon--yellow">&#128202;</div>
+          <div class="problem-content">
+            <span class="problem-badge badge--medio">Medio</span>
+            <h3>Sin arquitectura para escalar bien</h3>
+            <p>El crecimiento de clientes sigue empujando hacia más horas, más revisión y más fines de semana
+              arreglando operaciones que deberían venir resueltas.</p>
+          </div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon problem-icon--yellow">&#129504;</div>
+          <div class="problem-content">
+            <span class="problem-badge badge--medio">Medio</span>
+            <h3>Tiempo estratégico bloqueado</h3>
+            <p>El coste real no es solo operativo. Es el tiempo que no se puede dedicar a servicios premium,
+              formación continua o vida personal.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-block">
+        <p>El cuello de botella no es Yanira. Es una operativa donde <strong>cada capa tecnológica crea más revisión
+            humana de la que elimina</strong>. La oportunidad es construir un sistema que ordene, recuerde, registre y
+          deje a Yanira solo las decisiones de criterio.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════ TAB 2: SOLUCION ═══════════ -->
+  <div class="tab-content" id="solucion">
+    <div class="section">
+
+      <div class="section-header">
+        <div class="section-label">La Solución</div>
+        <h1 class="section-title section-title--gradient">Asesoría “AI-First”</h1>
+        <p class="section-subtitle">Infraestructura operativa AI-First + Plan Renove de monetización en un único
+          proyecto para operar con menos fricción, más control y mejor captura de valor.</p>
+      </div>
+
+      <div class="sol-hero">
+        <div class="sol-hero-inner">
+          <span class="sol-hero-label">Infraestructura crítica</span>
+          <h2 class="sol-hero-title">El sistema hace el trabajo operativo y Yanira solo supervisa lo que de verdad
+            requiere criterio profesional.</h2>
+          <p class="sol-hero-desc">Automatizamos gestión documental, recordatorios y procesamiento básico de facturas
+            con revisión por excepción. En paralelo, instalamos un Plan Renove de monetización con segmentación,
+            offers, niveles de servicio, contrato y reglas de extras.</p>
+          <div class="sol-stats">
+            <div class="sol-stat">
+              <div class="sol-stat-value">80%</div>
+              <div class="sol-stat-label">Trabajo manual objetivo a eliminar</div>
+            </div>
+            <div class="sol-stat">
+              <div class="sol-stat-value">8-12 sem</div>
+              <div class="sol-stat-label">Duración estimada</div>
+            </div>
+            <div class="sol-stat">
+              <div class="sol-stat-value">2</div>
+              <div class="sol-stat-label">Stacks integrados</div>
+            </div>
+            <div class="sol-stat">
+              <div class="sol-stat-value">2.999</div>
+              <div class="sol-stat-label">Precio único del proyecto (EUR)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sol-flow">
+        <div class="sol-flow-col">
+          <div class="sol-flow-item"><span class="fi">&#128193;</span> Drive / iCloud sin clasificar</div>
+          <div class="sol-flow-item"><span class="fi">&#128196;</span> Facturas, tickets y escaneos</div>
+          <div class="sol-flow-item"><span class="fi">&#9993;</span> Recordatorios manuales</div>
+          <div class="sol-flow-item"><span class="fi">&#128176;</span> Extras no cobrados</div>
+          <div class="sol-flow-item"><span class="fi">&#128202;</span> Clientes sin segmentar</div>
+        </div>
+        <div class="sol-flow-connector">
+          <div class="sol-flow-center">
+            <div class="sfc-label">Modelo operativo</div>
+            <div class="sfc-icon">&#9889;<div></div>
+              <div></div>
+            </div>
+            <div class="sfc-name">Asesoría<br>AI-First</div>
+            <div class="sfc-caps">
+              <span class="sfc-cap">Docs</span>
+              <span class="sfc-cap">OCR</span>
+              <span class="sfc-cap">Email</span>
+              <span class="sfc-cap">Segmentación</span>
+              <span class="sfc-cap">Offers</span>
+              <span class="sfc-cap">Contrato</span>
+              <span class="sfc-cap">ERP</span>
+              <span class="sfc-cap">Onboarding</span>
+            </div>
+          </div>
+        </div>
+        <div class="sol-flow-col">
+          <div class="sol-flow-item"><span class="fi">&#9989;</span> Documentos ordenados automáticamente</div>
+          <div class="sol-flow-item"><span class="fi">&#9200;</span> Revisión por excepción</div>
+          <div class="sol-flow-item"><span class="fi">&#128221;</span> Contratos con límites claros</div>
+          <div class="sol-flow-item"><span class="fi">&#128200;</span> Good / Better / Best / VIP</div>
+          <div class="sol-flow-item"><span class="fi">&#127919;</span> Despacho más rentable y controlado</div>
+        </div>
+      </div>
+
+      <div class="sol-layers">
+        <div class="sol-layer sol-layer--strategy">
+          <div class="sol-layer-header">
+            <div class="sol-layer-num">Stack 1</div>
+            <div class="sol-layer-title">Implantación Tecnológica</div>
+            <div class="sol-layer-sub">Elimina trabajo manual repetitivo</div>
+          </div>
+          <div class="sol-layer-items">
+            <div class="sol-layer-item">Document Intelligence System para ingresos, gastos y trimestre</div>
+            <div class="sol-layer-item">Renombrado, etiquetado y reglas para búsqueda posterior</div>
+            <div class="sol-layer-item">OCR / Accounting Fiscal Ops básico con revisión por excepción</div>
+            <div class="sol-layer-item">Validaciones básicas para duplicados y formatos incorrectos</div>
+            <div class="sol-layer-item">Email Ops Automation con recordatorios y bienvenida automatizada</div>
+            <div class="sol-layer-item">Logging, dashboard y trazabilidad de toda la actividad</div>
+          </div>
+        </div>
+        <div class="sol-layer sol-layer--infra">
+          <div class="sol-layer-header">
+            <div class="sol-layer-num">Stack 2</div>
+            <div class="sol-layer-title">Consultoría + Mentoring</div>
+            <div class="sol-layer-sub">Plan Renove de monetización</div>
+          </div>
+          <div class="sol-layer-items">
+            <div class="sol-layer-item">Diagnóstico de carga y rentabilidad real por cliente</div>
+            <div class="sol-layer-item">Segmentación por volumen, complejidad, urgencia y riesgo</div>
+            <div class="sol-layer-item">Offers diferenciadas con límites y resultados esperados</div>
+            <div class="sol-layer-item">Value Ladder Good / Better / Best / VIP con pricing defendible</div>
+            <div class="sol-layer-item">Upsells con triggers y reglas predefinidas para upgrades</div>
+            <div class="sol-layer-item">ERP Selection Sprint, Communications Playbook y Onboarding System</div>
+          </div>
+        </div>
+        <div class="sol-layer sol-layer--control">
+          <div class="sol-layer-header">
+            <div class="sol-layer-num">Transversal</div>
+            <div class="sol-layer-title">Acompañamiento</div>
+            <div class="sol-layer-sub">Implantación guiada y autonomía</div>
+          </div>
+          <div class="sol-layer-items">
+            <div class="sol-layer-item">8 sesiones de implementación de 1h, una por semana</div>
+            <div class="sol-layer-item">2 sesiones de seguimiento en mes 3 y mes 6</div>
+            <div class="sol-layer-item">Consenso semanal sobre qué bloque se trabaja y en qué orden</div>
+            <div class="sol-layer-item">SOPs completos para operar sin dependencia del proveedor</div>
+            <div class="sol-layer-item">Human-in-the-loop por diseño, no como parche</div>
+            <div class="sol-layer-item">Gobernanza, trazabilidad y control antes que automatización agresiva</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vl-block">
+        <div class="vl-block-header">
+          <div class="section-label">Plan Renove</div>
+          <div class="vl-block-title">Monetización por Niveles</div>
+          <div class="vl-block-sub">Salir de la tarifa fija para todos y cobrar según volumen, complejidad y urgencia
+          </div>
+        </div>
+
+        <div class="vl-transform">
+          <div class="vl-panel vl-panel--before">
+            <span class="vl-panel-label">Hoy</span>
+            <ul class="vl-panel-list">
+              <li>Tarifa fija sin relación con carga real</li>
+              <li>Extras, urgencias y picos absorbidos por costumbre</li>
+              <li>Sin segmentación operativa por drivers de carga</li>
+              <li>Sin reglas claras de qué entra y qué no entra</li>
+              <li>Más horas, pero no más rentabilidad</li>
+            </ul>
+          </div>
+          <div class="vl-arrow">
+            <div class="vl-arrow-icon">&#8594;</div>
+          </div>
+          <div class="vl-panel vl-panel--after">
+            <span class="vl-panel-label">Con AI-First</span>
+            <ul class="vl-panel-list">
+              <li>Cada cliente entra por el nivel correcto desde el día 1</li>
+              <li>Pricing basado en drivers reales de volumen y complejidad</li>
+              <li>Add-ons, urgencias y extras con reglas ya definidas</li>
+              <li>Onboarding con contrato, límites y expectativas claras</li>
+              <li>Upsells y upgrades sistematizados en lugar de improvisados</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="vl-stairs">
+          <span class="vl-stairs-label">&#8593; Mayor carga y valor</span>
+          <div class="vl-stair vl-stair--4">
+            <div class="vl-stair-num">4</div>
+            <div class="vl-stair-info">
+              <div class="vl-stair-name">VIP</div>
+              <div class="vl-stair-desc">Alta complejidad, urgencia o alcance premium con límites y extras pactados
+              </div>
+            </div>
+            <div class="vl-stair-tag">Opcional</div>
+          </div>
+          <div class="vl-stair vl-stair--3">
+            <div class="vl-stair-num">3</div>
+            <div class="vl-stair-info">
+              <div class="vl-stair-name">Best</div>
+              <div class="vl-stair-desc">Clientes de alto volumen con más documentos, más revisión y más intensidad
+              </div>
+            </div>
+            <div class="vl-stair-tag">Alto volumen</div>
+          </div>
+          <div class="vl-stair vl-stair--2">
+            <div class="vl-stair-num">2</div>
+            <div class="vl-stair-info">
+              <div class="vl-stair-name">Better</div>
+              <div class="vl-stair-desc">Servicio recurrente para clientes con carga media y reglas de alcance claras
+              </div>
+            </div>
+            <div class="vl-stair-tag">Crecimiento</div>
+          </div>
+          <div class="vl-stair vl-stair--1">
+            <div class="vl-stair-num">1</div>
+            <div class="vl-stair-info">
+              <div class="vl-stair-name">Good</div>
+              <div class="vl-stair-desc">Entrada base para clientes nuevos con contrato, límites y onboarding correcto
+              </div>
+            </div>
+            <div class="vl-stair-tag">Base</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sol-pricing">
+        <div class="sol-pricing-popup">
+          <div class="sol-pricing-popup-title">Contratación Rápida</div>
+          <div class="sol-pricing-popup-text">Solo para contrataciones firmadas en un plazo de 30 días.</div>
+        </div>
+        <div class="sol-pricing-card">
+          <div class="sol-pricing-label">Valor del presupuesto</div>
+          <div class="sol-pricing-value">7.999 EUR</div>
+          <div class="sol-pricing-special-label">Precio especial Yanira</div>
+          <div class="sol-pricing-original">3.999 EUR</div>
+          <div class="sol-pricing-final"><span>2.999</span> EUR</div>
+          <div class="sol-pricing-discount">Descuento adicional por contratación rápida · -1.000 EUR</div>
+          <div class="sol-pricing-terms">
+            <div class="sol-pricing-term">
+              <div class="sol-pricing-term-label">40% a la firma</div>
+              <div class="sol-pricing-term-value">1.199,60 EUR</div>
+            </div>
+            <div class="sol-pricing-term">
+              <div class="sol-pricing-term-label">60% a la entrega</div>
+              <div class="sol-pricing-term-value">1.799,40 EUR</div>
+            </div>
+          </div>
+          <div class="sol-pricing-maint">Formato: <strong>paquete único con Stack 1 + Stack 2 + acompañamiento
+              transversal</strong></div>
+          <div class="sol-pricing-note">Oferta especial válida para contrataciones firmadas en un plazo máximo de 30
+            días. No se consideran iniciados los trabajos hasta la confirmación del primer pago.</div>
+        </div>
+      </div>
+
+      <div class="sol-scope">
+        <div class="sol-scope-card sol-scope-card--yes">
+          <h3>Qué habilita</h3>
+          <ul>
+            <li>Operativa en revisión por excepción en lugar de revisión total</li>
+            <li>Document Intelligence, OCR básico y Email Ops funcionando como sistema</li>
+            <li>Plan Renove con segmentación, offers, value ladder y contrato</li>
+            <li>ERP shortlist, playbook de comunicación y onboarding listos para usar</li>
+            <li>Despacho más ligero, controlado y rentable sin crecer en horas</li>
+          </ul>
+        </div>
+        <div class="sol-scope-card sol-scope-card--no">
+          <h3>Qué no hace (a propósito)</h3>
+          <ul>
+            <li>No sustituye el criterio fiscal ni comercial profesional de Yanira</li>
+            <li>No incluye migración de ERP, WhatsApp Intelligence ni subvenciones automáticas</li>
+            <li>No desarrolla software a medida ni decide precios o cambios por Yanira</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════ TAB 3: COMO FUNCIONA ═══════════ -->
+  <div class="tab-content" id="comofunciona">
+    <div class="section">
+
+      <div class="section-header">
+        <div class="section-label">El Proceso</div>
+        <h1 class="section-title section-title--gradient">¿Cómo funciona?</h1>
+        <p class="section-subtitle">90 días. 5 pasos. Validación antes de escalar.</p>
+      </div>
+
+      <div class="tl-container">
+        <div class="tl-track">
+          <div class="tl-track-bg"></div>
+          <div class="tl-track-fill" style="height:100%"></div>
+        </div>
+
+        <div class="tl-step">
+          <div class="tl-step-content">
+            <div class="tl-step-card">
+              <span class="tl-step-icon">&#128269;</span>
+              <span class="tl-step-badge">Semana 1</span>
+              <h3 class="tl-step-title">Piloto rápido</h3>
+              <ul class="tl-step-list">
+                <li>Seleccionamos 3 clientes piloto de bajo, medio y alto volumen</li>
+                <li>Configuramos reglas de clasificación sobre la operativa real de Yanira</li>
+                <li>Objetivo: tener un resultado visible antes del día 14</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-step-node">
+            <div class="tl-node-circle">1<div class="tl-node-ring"></div>
+            </div>
+          </div>
+          <div class="tl-step-empty"></div>
+        </div>
+
+        <div class="tl-step">
+          <div class="tl-step-empty"></div>
+          <div class="tl-step-node">
+            <div class="tl-node-circle">2<div class="tl-node-ring"></div>
+            </div>
+          </div>
+          <div class="tl-step-content">
+            <div class="tl-step-card">
+              <span class="tl-step-icon">&#9881;</span>
+              <span class="tl-step-badge">Semanas 2-4</span>
+              <h3 class="tl-step-title">Automatización operativa</h3>
+              <ul class="tl-step-list">
+                <li>Activamos Email Ops Automation y OCR básico con revisión por excepción</li>
+                <li>Diseñamos contrato, pricing y primer marco de onboarding</li>
+                <li>Checkpoint intermedio: si el piloto no funciona, se revisa antes de seguir</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-step">
+          <div class="tl-step-content">
+            <div class="tl-step-card">
+              <span class="tl-step-icon">&#128640;</span>
+              <span class="tl-step-badge">Semanas 5-8</span>
+              <h3 class="tl-step-title">Expansión controlada</h3>
+              <ul class="tl-step-list">
+                <li>Escalamos a más clientes y afinamos reglas según excepciones reales</li>
+                <li>Se trabaja la value ladder, el playbook y la selección de ERP</li>
+                <li>Todo queda documentado con SOPs, logging y trazabilidad</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-step-node">
+            <div class="tl-node-circle">3<div class="tl-node-ring"></div>
+            </div>
+          </div>
+          <div class="tl-step-empty"></div>
+        </div>
+
+        <div class="tl-step">
+          <div class="tl-step-empty"></div>
+          <div class="tl-step-node">
+            <div class="tl-node-circle">4<div class="tl-node-ring"></div>
+            </div>
+          </div>
+          <div class="tl-step-content">
+            <div class="tl-step-card">
+              <span class="tl-step-icon">&#128203;</span>
+              <span class="tl-step-badge">Día 60</span>
+              <h3 class="tl-step-title">Stress Test objetivo</h3>
+              <ul class="tl-step-list">
+                <li>Clasificación correcta de 50 documentos reales de 3 clientes diferentes</li>
+                <li>2 ciclos completos de recordatorios enviados sin intervención manual</li>
+                <li>Plan Renove de Monetización + Value Ladder definidos y validados por Yanira</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-step">
+          <div class="tl-step-content">
+            <div class="tl-step-card">
+              <span class="tl-step-icon">&#129309;</span>
+              <span class="tl-step-badge">Semanas 9-12</span>
+              <h3 class="tl-step-title">Producción y transferencia</h3>
+              <ul class="tl-step-list">
+                <li>Sistema integrado en la operativa diaria con Yanira en control</li>
+                <li>Entrega de SOPs, dashboard, plantillas y materiales de autonomía</li>
+                <li>Seguimiento posterior para consolidar métricas y ajustes</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-step-node">
+            <div class="tl-node-circle">5<div class="tl-node-ring"></div>
+            </div>
+          </div>
+          <div class="tl-step-empty"></div>
+        </div>
+
+      </div>
+
+      <div class="tl-result">
+        <p><strong>Al final del proyecto</strong>, Yanira no trabaja menos por magia. Trabaja con una infraestructura
+          que absorbe lo repetitivo, deja visibles las excepciones y libera tiempo real para servicios premium y
+          decisiones de más valor.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════ TAB 4: GARANTIA ═══════════ -->
+  <div class="tab-content" id="garantia">
+    <div class="section">
+
+      <div class="section-header">
+        <div class="section-label">Tu Seguridad</div>
+        <h1 class="section-title section-title--gradient">AI Stress Test Guarantee</h1>
+        <p class="section-subtitle">Si el sistema no cumple lo prometido aquí, devolución del 100% de la inversión.</p>
+      </div>
+
+      <p class="gar-intro">Una vez finalizada la implantación acordada, el sistema se somete a un
+        <strong>Stress Test Operativo</strong> definido en contrato. No validamos si “gusta”. Validamos funcionamiento
+        real con criterios objetivos.
+      </p>
+
+      <div class="gar-grid">
+        <div class="gar-card">
+          <div class="gar-card-head">
+            <div class="gar-card-num">1</div>
+            <div class="gar-card-title">Document Intelligence</div>
+          </div>
+          <p>Clasifica correctamente al menos 50 documentos reales de 3 clientes diferentes en la estructura definida
+            para la operativa.</p>
+        </div>
+        <div class="gar-card">
+          <div class="gar-card-head">
+            <div class="gar-card-num">2</div>
+            <div class="gar-card-title">Email Ops Automation</div>
+          </div>
+          <p>Completa 2 ciclos de recordatorios mensuales sin intervención manual.</p>
+        </div>
+        <div class="gar-card">
+          <div class="gar-card-head">
+            <div class="gar-card-num">3</div>
+            <div class="gar-card-title">Plan Renove Monetización</div>
+          </div>
+          <p>Plan definido y validado por Yanira, con todos los entregables aquí descritos debidamente entregados.</p>
+        </div>
+        <div class="gar-card">
+          <div class="gar-card-head">
+            <div class="gar-card-num">4</div>
+            <div class="gar-card-title">Si no supera el test</div>
+          </div>
+          <p>Yanira puede optar por la devolución del 100% de la inversión, sin penalizaciones, sin discusiones y sin
+            letra pequeña.</p>
+        </div>
+        <div class="gar-card">
+          <div class="gar-card-head">
+            <div class="gar-card-num">5</div>
+            <div class="gar-card-title">Checkpoint temprano</div>
+          </div>
+          <p>Si el piloto de Document Intelligence no funciona de forma consistente, se para, se revisa y Yanira
+            decide si continuar o cortar con reembolso proporcional.</p>
+        </div>
+        <div class="gar-card">
+          <div class="gar-card-head">
+            <div class="gar-card-num">6</div>
+            <div class="gar-card-title">Límite de validación</div>
+          </div>
+          <p>Se valida funcionamiento real bajo criterios objetivos. No se valida estética ni percepción subjetiva.</p>
+        </div>
+      </div>
+
+      <div class="gar-criteria">
+        <p>Tres criterios principales. Si uno falla, Yanira puede activar la garantía.<br>No se valida si “gusta”.<br>Se
+          valida si <span class="gar-em">FUNCIONA</span> de verdad.</p>
+      </div>
+
+      <div class="gar-process">
+        <div class="gar-process-step">
+          <div class="gar-process-num">Piloto</div>
+          <div class="gar-process-text">Checkpoint temprano</div>
+          <div class="gar-process-detail">Control antes de escalar</div>
+        </div>
+        <div class="gar-process-step">
+          <div class="gar-process-num">Día 60</div>
+          <div class="gar-process-text">Stress Test</div>
+          <div class="gar-process-detail">Validación contractual</div>
+        </div>
+        <div class="gar-process-step">
+          <div class="gar-process-num">Si falla</div>
+          <div class="gar-process-text">Devolución 100%</div>
+          <div class="gar-process-detail">Sin letra pequeña</div>
+        </div>
+      </div>
+
+      <div class="gar-refund">
+        <div class="gar-refund-title">Devolución completa del <span>100%</span> de la inversión</div>
+        <div class="gar-refund-terms">
+          <div class="gar-refund-term">Sin penalizaciones</div>
+          <div class="gar-refund-term">Sin discusiones</div>
+          <div class="gar-refund-term">Sin letra pequeña</div>
+        </div>
+      </div>
+
+      <div class="gar-exclusions">
+        <div class="gar-exclusions-title">Qué deja claro esta garantía</div>
+        <p>El sistema se entrega solo si supera criterios objetivos definidos en contrato. Si no los supera, el
+          proyecto se da por finalizado y se activa la devolución.</p>
+        <p>El riesgo es nuestro. El control es de Yanira.</p>
+      </div>
+
+      <div class="gar-close">
+        <p>Esta garantía existe para eliminar riesgo desde el principio: <strong>si no está listo para operar de forma
+            real, no se considera entregado</strong>.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="footer-name">Raúl Artiles Mendoza</div>
+    <div class="footer-role">EduKami</div>
+    <div class="footer-org">Propuesta comercial · Asesoría AI-First</div>
+    <div class="footer-contact">
+      <a href="mailto:raul@edukami.ai">raul@edukami.ai</a> &nbsp;&middot;&nbsp; <a
+        href="https://www.edukami.ai">www.edukami.ai</a> &nbsp;&middot;&nbsp; <a
+        href="tel:+34639351296">+34 639 351 296</a>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        const t = document.getElementById(btn.dataset.tab);
+        if (t) { t.classList.add('active'); window.scrollTo({ top: 0, behavior: 'smooth' }) }
+      });
+    });
+  </script>
+</body>
+
+</html>
