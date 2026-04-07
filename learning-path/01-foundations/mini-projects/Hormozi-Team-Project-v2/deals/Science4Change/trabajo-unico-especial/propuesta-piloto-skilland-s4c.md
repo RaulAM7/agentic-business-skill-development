@@ -2,7 +2,7 @@
 
 ## Piloto Skilland para Science for Change
 
-*Primer caso de uso real para activar conocimiento experto en formación escalable y operativa*
+*Periodo piloto de activación y experimentación conjunta para convertir conocimiento experto en formación escalable y operativa*
 
 **Los titulares de esta propuesta**
 
@@ -10,11 +10,11 @@ Science for Change puede dar un primer paso sólido hacia un modelo formativo m�
 
 La presente propuesta no plantea simplemente el acceso a una plataforma. Plantea la implantación cuidada de un sistema que permita a Science for Change convertir conocimiento experto en formación estructurada, acompañada y ejecutable, reduciendo fricción para sus expertos y generando una primera base práctica sobre la que poder crecer.
 
-Para iniciar esta colaboración de forma clara, razonable y aprobable, se propone un piloto acotado de 6 meses, orientado a activar un primer caso de uso real con 1 licencia Creator y 20 licencias Student, integrando configuración, onboarding, acompañamiento y seguimiento en un único paquete cerrado.
+Para iniciar esta colaboración de forma clara, razonable y aprobable, se propone un piloto acotado de 6 meses, con 1 licencia Creator y 20 licencias Student, integrando configuración, onboarding, acompañamiento y seguimiento en un único paquete cerrado. Durante este periodo, Science for Change podrá crear e impartir las formaciones que considere oportunas, sin limitar el uso a una sola iniciativa formativa.
 
 ## 1. Objeto de la propuesta
 
-El objeto de la presente propuesta es activar, junto a Science for Change, un piloto acotado de Skilland orientado a poner en marcha un primer caso de uso formativo real, sobre una temática, proyecto o línea de conocimiento prioritaria para la organización, a concretar conjuntamente en la fase de arranque.
+El objeto de la presente propuesta es activar, junto a Science for Change, un piloto acotado de Skilland orientado a poner la plataforma en uso real durante un periodo cerrado de 6 meses, permitiendo a la organización crear, estructurar e impartir las formaciones que considere prioritarias en ese intervalo.
 
 Este piloto no consiste en una cesión temporal de licencias ni en una prueba abstracta de herramienta. Consiste en una primera implantación cuidada de un sistema que permita a Science for Change:
 
@@ -22,7 +22,7 @@ Este piloto no consiste en una cesión temporal de licencias ni en una prueba ab
 - activar una dinámica operativa real de uso de la plataforma
 - validar la adopción, el encaje metodológico y el potencial de continuidad
 
-El sentido de esta propuesta es, por tanto, activar una primera experiencia práctica bien diseñada, capaz de generar aprendizaje, utilidad inmediata y criterios claros para valorar posibles siguientes fases.
+El sentido de esta propuesta es, por tanto, activar una experiencia práctica bien diseñada, capaz de generar aprendizaje, utilidad inmediata y criterios claros para valorar posibles siguientes fases.
 
 ## 2. Contexto y necesidad detectada
 
@@ -43,8 +43,8 @@ La necesidad detectada no es solo tecnológica. Es metodológica y operativa. Sc
 
 La presente propuesta persigue cinco objetivos concretos y complementarios:
 
-- activar el piloto de Skilland sobre un primer caso de uso real en Science for Change
-- convertir un primer bloque de conocimiento experto en una experiencia formativa útil y publicable
+- activar el piloto de Skilland como entorno real de trabajo formativo en Science for Change
+- convertir conocimiento experto en una o varias experiencias formativas útiles y publicables durante el periodo
 - facilitar la adopción operativa del sistema por parte del perfil creador y del equipo implicado
 - validar en la práctica el encaje entre plataforma, metodología, equipo y necesidad real
 - generar aprendizajes y criterios que permitan valorar, con base práctica, posibles siguientes fases de colaboración
@@ -57,13 +57,13 @@ La lógica de funcionamiento es la siguiente:
 
 - Science for Change aporta el conocimiento experto, la temática prioritaria y el contexto de uso
 - Skilland facilita la plataforma y el entorno de creación para transformar ese conocimiento en formación estructurada
-- el proceso se acompaña de forma guiada para reducir fricción, acelerar la puesta en marcha y asegurar una primera experiencia operativa sólida
+- el proceso se acompaña de forma guiada para reducir fricción, acelerar la puesta en marcha y asegurar una experiencia operativa sólida
 
 El enfoque metodológico se apoya en cuatro principios:
 
 - simplicidad para el experto: el sistema se adapta al conocimiento existente, no al revés
 - acompañamiento frente a autoservicio: la implantación se guía y se acompaña, no se deja al usuario solo ante la herramienta
-- activación progresiva: se empieza por un caso de uso acotado y real, evitando despliegues prematuros
+- experimentación aplicada: el piloto se activa sobre necesidades reales y permite crear e impartir distintas formaciones durante el periodo, sin limitar el uso a una sola iniciativa
 - utilidad práctica: el objetivo no es "subir contenidos", sino poner en funcionamiento una experiencia formativa con sentido y uso real
 
 De este modo, Skilland ayuda a Science for Change a transformar metodología, experiencia y conocimiento aplicado en una primera solución formativa más escalable, sin añadir complejidad innecesaria a los equipos.
@@ -75,15 +75,15 @@ La presente propuesta se configura como un paquete integrado de implantación in
 - acceso a la plataforma Skilland durante 6 meses
 - 1 licencia Creator para el perfil responsable de creación
 - 20 licencias Student para participantes del piloto
-- sesión de arranque para concretar el caso de uso piloto y ordenar la puesta en marcha
+- sesión de arranque para ordenar la puesta en marcha y definir las prioridades iniciales de activación
 - configuración inicial del entorno de trabajo
 - onboarding guiado para el perfil creador y equipo responsable
-- acompañamiento para estructurar y activar el primer activo formativo o experiencia piloto
+- acompañamiento para estructurar, activar y mejorar las formaciones que Science for Change decida impulsar durante el periodo
 - seguimiento durante el periodo de uso para resolver dudas, ajustar dinámica y sostener la implantación
-- soporte funcional vinculado al alcance del piloto
+- soporte funcional durante el periodo piloto
 - sesión final de revisión de aprendizajes y valoración de posibles siguientes pasos
 
-La propuesta se centra en un único primer caso de uso. Cualquier ampliación de licencias, nuevos casos adicionales o extensiones de alcance se valorará en una fase posterior, si ambas partes identifican encaje.
+La propuesta no limita el número de formaciones a crear e impartir durante los 6 meses. El piloto se acota por duración, licencias y marco de acompañamiento, no por cantidad de acciones formativas. Cualquier ampliación de licencias o extensión de alcance más allá de estas condiciones se valorará en una fase posterior, si ambas partes identifican encaje.
 
 ## 6. Formato piloto: sentido, justificación y alcance
 
@@ -93,7 +93,7 @@ Este piloto se plantea como una fase inicial de activación, validación y proye
 
 **Activación**
 
-Permite poner Skilland en uso real sobre una necesidad concreta de Science for Change, evitando que la relación quede en una conversación conceptual o en una prueba sin aplicación práctica.
+Permite poner Skilland en uso real dentro de la operativa de Science for Change, evitando que la relación quede en una conversación conceptual o en una prueba sin aplicación práctica.
 
 **Validación**
 
@@ -103,7 +103,7 @@ Permite comprobar, en condiciones reales, cómo encajan la plataforma, el acompa
 
 Permite generar aprendizajes, criterios de continuidad y una base práctica para valorar, más adelante, posibles extensiones de la colaboración.
 
-Este framing es importante: no se propone un piloto para probar una herramienta, sino para activar un primer caso de uso real y validar las condiciones de una posible evolución conjunta entre Skilland y Science for Change.
+Este framing es importante: no se propone un piloto para probar una herramienta, sino para activar un periodo real de trabajo, creación e impartición formativa que permita validar las condiciones de una posible evolución conjunta entre Skilland y Science for Change.
 
 ## 7. Condiciones económicas / presupuesto
 
@@ -113,7 +113,7 @@ Se propone un piloto cerrado con las siguientes condiciones:
 - alcance: 1 licencia Creator + 20 licencias Student + configuración + onboarding + acompañamiento + seguimiento
 - inversión total del piloto: **3.000 EUR + IVA**
 
-Este importe corresponde a una fase inicial de implantación y validación diseñada específicamente para Science for Change. No responde a una lógica de cesión temporal de licencias ni a un descuento promocional, sino a un formato acotado, definido y orientado a activar un primer caso de uso con las condiciones mínimas necesarias para que el piloto tenga sentido operativo.
+Este importe corresponde a una fase inicial de implantación y validación diseñada específicamente para Science for Change. No responde a una lógica de cesión temporal de licencias ni a un descuento promocional, sino a un formato acotado, definido y orientado a habilitar un periodo real de creación, impartición y aprendizaje conjunto con las condiciones mínimas necesarias para que el piloto tenga sentido operativo.
 
 ## 8. Calendario propuesto
 
@@ -124,15 +124,15 @@ El piloto se plantea con una secuencia sencilla y progresiva a partir de la acep
 Semanas 1-2
 
 - kickoff de trabajo
-- definición conjunta del caso de uso piloto
+- ordenación de prioridades iniciales de trabajo
 - configuración inicial del entorno
 - onboarding del perfil creador
 
-**Fase 2. Puesta en marcha del primer caso de uso**
+**Fase 2. Puesta en marcha inicial de las primeras formaciones**
 
 Semanas 3-6
 
-- estructuración del primer contenido o experiencia formativa
+- estructuración y activación de las primeras formaciones
 - acompañamiento en la activación del piloto
 - primeras validaciones operativas
 
@@ -140,7 +140,7 @@ Semanas 3-6
 
 Meses 2-5
 
-- utilización real del sistema en el marco del piloto
+- utilización real del sistema, creación e impartición continuada de formaciones
 - seguimiento periódico
 - resolución de dudas y ajustes sobre la marcha
 
@@ -175,9 +175,9 @@ Estas líneas no forman parte del alcance actual. Se plantean únicamente como e
 
 ## 11. Cierre / contacto
 
-La presente propuesta busca ofrecer a Science for Change una forma sólida y bien acotada de iniciar la colaboración con Skilland, activando un primer caso de uso real y generando una base práctica para decidir con criterio los siguientes pasos.
+La presente propuesta busca ofrecer a Science for Change una forma sólida y bien acotada de iniciar la colaboración con Skilland, activando un periodo real de creación, impartición y experimentación conjunta, y generando una base práctica para decidir con criterio los siguientes pasos.
 
-Quedamos a disposición de Science for Change para revisar esta propuesta, concretar el caso de uso inicial y acordar el arranque del piloto.
+Quedamos a disposición de Science for Change para revisar esta propuesta y acordar el arranque del piloto.
 
 **Raúl Artiles Mendoza**  
 Business Development Manager  
