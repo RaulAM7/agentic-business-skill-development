@@ -138,7 +138,7 @@ No debe usarse una lógica tipo:
 ## 6.4. Criterio económico recomendado
 La propuesta puede presentarse como:
 
-- **Piloto de 6 meses**
+- **Piloto de 3 meses**
 - **Precio cerrado**
 - **Incluye licencias + configuración + acompañamiento + seguimiento**
 - **Orientado a un primer caso de uso**
