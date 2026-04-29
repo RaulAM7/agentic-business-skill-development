@@ -111,9 +111,11 @@ Se propone un piloto cerrado con las siguientes condiciones:
 
 - duración: 6 meses
 - alcance: 1 licencia Creator + 20 licencias Student + configuración + onboarding + acompañamiento + seguimiento
-- inversión total del piloto: **3.000 EUR + IVA**
+- inversión total del piloto: **1.800 EUR**
 
 Este importe corresponde a una fase inicial de implantación y validación diseñada específicamente para Science for Change. No responde a una lógica de cesión temporal de licencias ni a un descuento promocional, sino a un formato acotado, definido y orientado a habilitar un periodo real de creación, impartición y aprendizaje conjunto con las condiciones mínimas necesarias para que el piloto tenga sentido operativo.
+
+La presente propuesta se formula sin IVA ni IGIC, por no resultar de aplicación en esta operación.
 
 ## 8. Calendario propuesto
 
@@ -156,8 +158,10 @@ Mes 6
 
 La facturación del piloto se propone en dos hitos:
 
-- **50% a la aceptación de la propuesta y firma del correspondiente contrato de prestación de servicios**: 1.500 EUR + IVA
-- **50% a la finalización de la fase inicial de activación y puesta en marcha del piloto**: 1.500 EUR + IVA
+- **50% a la aceptación de la propuesta y firma del correspondiente contrato de prestación de servicios**: 900 EUR
+- **50% a la finalización de la fase inicial de activación y puesta en marcha del piloto**: 900 EUR
+
+Los importes anteriores se facturarán sin IVA ni IGIC, por no resultar de aplicación en esta operación.
 
 El pago se realizará por transferencia bancaria, con vencimiento a 15 días desde la fecha de emisión de cada factura.
 

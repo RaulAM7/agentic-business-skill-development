@@ -913,11 +913,19 @@
       font-weight: 500
     }
 
+    .sol-pricing-final-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 12px;
+      flex-wrap: wrap
+    }
+
     .sol-pricing-final {
       font-size: clamp(40px, 6vw, 56px);
       font-weight: 900;
       color: #fff;
-      margin-bottom: 8px;
       letter-spacing: -.02em
     }
 
@@ -925,16 +933,126 @@
       color: var(--mint)
     }
 
+    .sol-pricing-seal {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #ffb0a9 0%, #ff847c 18%, var(--red) 62%, #b93129 100%);
+      border: 2px solid rgba(255, 255, 255, .28);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 14px;
+      position: relative;
+      transform: rotate(10deg);
+      box-shadow: 0 14px 36px rgba(224, 72, 63, .3);
+      flex-shrink: 0
+    }
+
+    .sol-pricing-seal::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: 50%;
+      border: 1.5px dashed rgba(255, 255, 255, .55)
+    }
+
+    .sol-pricing-seal-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      position: relative;
+      z-index: 1;
+      text-transform: uppercase
+    }
+
+    .sol-pricing-seal-copy strong {
+      font-size: 12px;
+      line-height: 1.05;
+      letter-spacing: 1.2px
+    }
+
+    .sol-pricing-seal-copy span {
+      font-size: 9px;
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: .8px;
+      opacity: .9
+    }
+
     .sol-pricing-discount {
       display: inline-block;
       font-size: 11px;
       font-weight: 700;
-      background: rgba(126, 209, 178, .12);
-      color: var(--mint);
+      background: rgba(224, 72, 63, .12);
+      color: #ffb8b2;
       padding: 6px 18px;
       border-radius: 100px;
-      border: 1px solid rgba(126, 209, 178, .2);
-      margin-bottom: 28px
+      border: 1px solid rgba(255, 132, 124, .28);
+      margin-bottom: 20px
+    }
+
+    .sol-pricing-countdown {
+      margin: 0 auto 28px;
+      max-width: 420px;
+      padding: 18px 20px 20px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    .sol-pricing-countdown-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .64);
+      margin-bottom: 14px
+    }
+
+    .sol-pricing-countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px
+    }
+
+    .sol-pricing-countdown-unit {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 14px;
+      padding: 14px 8px 12px
+    }
+
+    .sol-pricing-countdown-value {
+      display: block;
+      font-size: clamp(22px, 3.5vw, 28px);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1
+    }
+
+    .sol-pricing-countdown-unit span:last-child {
+      display: block;
+      margin-top: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .48)
+    }
+
+    .sol-pricing-countdown-note {
+      margin-top: 12px;
+      font-size: 11px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, .5)
+    }
+
+    .sol-pricing-countdown.is-expired {
+      border-color: rgba(255, 132, 124, .28);
+      background: rgba(224, 72, 63, .08)
     }
 
     .sol-pricing-terms {
@@ -2140,6 +2258,20 @@
         align-items: center
       }
 
+      .sol-pricing-final-row {
+        flex-direction: column;
+        gap: 14px
+      }
+
+      .sol-pricing-seal {
+        width: 100px;
+        height: 100px
+      }
+
+      .sol-pricing-countdown-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
       .sol-pricing-term {
         max-width: none;
         width: 100%
@@ -2199,6 +2331,10 @@
 
       .sol-pricing-card {
         padding: 36px 28px
+      }
+
+      .sol-pricing-countdown {
+        padding: 16px
       }
 
       .gar-refund {
@@ -2543,20 +2679,50 @@
         <div class="sol-pricing-card">
           <div class="sol-pricing-label">Inversión del proyecto</div>
           <div class="sol-pricing-original">4.999 EUR</div>
-          <div class="sol-pricing-final"><span>3.200</span> EUR</div>
-          <div class="sol-pricing-discount">Descuento especial Alonso Ventura — 36%</div>
+          <div class="sol-pricing-final-row">
+            <div class="sol-pricing-final"><span>2.200</span> EUR</div>
+            <div class="sol-pricing-seal" aria-label="Descuento temporal válido hasta el 1 de mayo de 2026">
+              <div class="sol-pricing-seal-copy">
+                <strong>Descuento<br>temporal</strong>
+                <span>Hasta 01-05-2026</span>
+              </div>
+            </div>
+          </div>
+          <div class="sol-pricing-discount">Solo para contrataciones confirmadas antes de finalizar el 01-05-2026.</div>
+          <div class="sol-pricing-countdown" data-deadline="2026-05-01T23:59:59+01:00">
+            <div class="sol-pricing-countdown-label">Cuenta atrás de la condición especial</div>
+            <div class="sol-pricing-countdown-grid">
+              <div class="sol-pricing-countdown-unit">
+                <strong class="sol-pricing-countdown-value" data-countdown="days">00</strong>
+                <span>Días</span>
+              </div>
+              <div class="sol-pricing-countdown-unit">
+                <strong class="sol-pricing-countdown-value" data-countdown="hours">00</strong>
+                <span>Horas</span>
+              </div>
+              <div class="sol-pricing-countdown-unit">
+                <strong class="sol-pricing-countdown-value" data-countdown="minutes">00</strong>
+                <span>Min</span>
+              </div>
+              <div class="sol-pricing-countdown-unit">
+                <strong class="sol-pricing-countdown-value" data-countdown="seconds">00</strong>
+                <span>Seg</span>
+              </div>
+            </div>
+            <div class="sol-pricing-countdown-note" data-countdown-note>La oferta temporal se cierra el 01-05-2026 a las 23:59.</div>
+          </div>
           <div class="sol-pricing-terms">
             <div class="sol-pricing-term">
               <div class="sol-pricing-term-label">A la firma</div>
-              <div class="sol-pricing-term-value">1.600 EUR</div>
+              <div class="sol-pricing-term-value">1.100 EUR</div>
             </div>
             <div class="sol-pricing-term">
               <div class="sol-pricing-term-label">A la entrega</div>
-              <div class="sol-pricing-term-value">1.600 EUR</div>
+              <div class="sol-pricing-term-value">1.100 EUR</div>
             </div>
           </div>
           <div class="sol-pricing-maint">Mantenimiento operativo: <strong>80 EUR/mes</strong></div>
-          <div class="sol-pricing-note">Precio especial válido 30 días desde la fecha de esta propuesta.</div>
+          <div class="sol-pricing-note">Precio promocional activo hasta el 01-05-2026. Después, la propuesta vuelve a su condición anterior.</div>
         </div>
       </div>
 
@@ -2824,6 +2990,49 @@
         if (t) { t.classList.add('active'); window.scrollTo({ top: 0, behavior: 'smooth' }) }
       });
     });
+
+    const pricingCountdown = document.querySelector('.sol-pricing-countdown');
+
+    if (pricingCountdown) {
+      const deadline = new Date(pricingCountdown.dataset.deadline).getTime();
+      const countdownFields = {
+        days: pricingCountdown.querySelector('[data-countdown="days"]'),
+        hours: pricingCountdown.querySelector('[data-countdown="hours"]'),
+        minutes: pricingCountdown.querySelector('[data-countdown="minutes"]'),
+        seconds: pricingCountdown.querySelector('[data-countdown="seconds"]')
+      };
+      const countdownNote = pricingCountdown.querySelector('[data-countdown-note]');
+      const pad = value => String(value).padStart(2, '0');
+
+      const renderCountdown = () => {
+        const remaining = deadline - Date.now();
+
+        if (remaining <= 0) {
+          Object.values(countdownFields).forEach(field => {
+            if (field) { field.textContent = '00'; }
+          });
+
+          pricingCountdown.classList.add('is-expired');
+          if (countdownNote) {
+            countdownNote.textContent = 'La ventana de descuento terminó el 01-05-2026 a las 23:59.';
+          }
+          return;
+        }
+
+        const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((remaining / (1000 * 60)) % 60);
+        const seconds = Math.floor((remaining / 1000) % 60);
+
+        countdownFields.days.textContent = pad(days);
+        countdownFields.hours.textContent = pad(hours);
+        countdownFields.minutes.textContent = pad(minutes);
+        countdownFields.seconds.textContent = pad(seconds);
+      };
+
+      renderCountdown();
+      setInterval(renderCountdown, 1000);
+    }
   </script>
 </body>
 
